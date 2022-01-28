@@ -64,33 +64,33 @@ namespace SchoolApp.Infrastructure.Migrations
                         {
                             id = 1,
                             coursename = "Course 1",
-                            createdate = new DateTime(2022, 1, 28, 14, 29, 43, 606, DateTimeKind.Local).AddTicks(9723),
+                            createdate = new DateTime(2022, 1, 28, 14, 41, 3, 531, DateTimeKind.Local).AddTicks(1962),
                             createdby = "Seed Data",
                             professorid = 1,
                             studentid = 1,
-                            updatedate = new DateTime(2022, 1, 28, 14, 29, 43, 606, DateTimeKind.Local).AddTicks(9735),
+                            updatedate = new DateTime(2022, 1, 28, 14, 41, 3, 531, DateTimeKind.Local).AddTicks(1977),
                             updatedby = "Seed Data"
                         },
                         new
                         {
                             id = 2,
                             coursename = "Course 2",
-                            createdate = new DateTime(2022, 1, 28, 14, 29, 43, 606, DateTimeKind.Local).AddTicks(9740),
+                            createdate = new DateTime(2022, 1, 28, 14, 41, 3, 531, DateTimeKind.Local).AddTicks(1982),
                             createdby = "Seed Data",
                             professorid = 2,
                             studentid = 2,
-                            updatedate = new DateTime(2022, 1, 28, 14, 29, 43, 606, DateTimeKind.Local).AddTicks(9742),
+                            updatedate = new DateTime(2022, 1, 28, 14, 41, 3, 531, DateTimeKind.Local).AddTicks(1984),
                             updatedby = "Seed Data"
                         },
                         new
                         {
                             id = 3,
                             coursename = "Course 3",
-                            createdate = new DateTime(2022, 1, 28, 14, 29, 43, 606, DateTimeKind.Local).AddTicks(9744),
+                            createdate = new DateTime(2022, 1, 28, 14, 41, 3, 531, DateTimeKind.Local).AddTicks(1986),
                             createdby = "Seed Data",
                             professorid = 3,
                             studentid = 3,
-                            updatedate = new DateTime(2022, 1, 28, 14, 29, 43, 606, DateTimeKind.Local).AddTicks(9745),
+                            updatedate = new DateTime(2022, 1, 28, 14, 41, 3, 531, DateTimeKind.Local).AddTicks(1988),
                             updatedby = "Seed Data"
                         });
                 });
@@ -126,28 +126,28 @@ namespace SchoolApp.Infrastructure.Migrations
                         new
                         {
                             id = 1,
-                            createdate = new DateTime(2022, 1, 28, 14, 29, 43, 606, DateTimeKind.Local).AddTicks(3737),
+                            createdate = new DateTime(2022, 1, 28, 14, 41, 3, 530, DateTimeKind.Local).AddTicks(5406),
                             createdby = "Seed Data",
                             levelname = "Level 1",
-                            updatedate = new DateTime(2022, 1, 28, 14, 29, 43, 606, DateTimeKind.Local).AddTicks(3781),
+                            updatedate = new DateTime(2022, 1, 28, 14, 41, 3, 530, DateTimeKind.Local).AddTicks(5453),
                             updatedby = "Seed Data"
                         },
                         new
                         {
                             id = 2,
-                            createdate = new DateTime(2022, 1, 28, 14, 29, 43, 606, DateTimeKind.Local).AddTicks(3786),
+                            createdate = new DateTime(2022, 1, 28, 14, 41, 3, 530, DateTimeKind.Local).AddTicks(5457),
                             createdby = "Seed Data",
                             levelname = "Level 2",
-                            updatedate = new DateTime(2022, 1, 28, 14, 29, 43, 606, DateTimeKind.Local).AddTicks(3787),
+                            updatedate = new DateTime(2022, 1, 28, 14, 41, 3, 530, DateTimeKind.Local).AddTicks(5459),
                             updatedby = "Seed Data"
                         },
                         new
                         {
                             id = 3,
-                            createdate = new DateTime(2022, 1, 28, 14, 29, 43, 606, DateTimeKind.Local).AddTicks(3789),
+                            createdate = new DateTime(2022, 1, 28, 14, 41, 3, 530, DateTimeKind.Local).AddTicks(5462),
                             createdby = "Seed Data",
                             levelname = "Level 3",
-                            updatedate = new DateTime(2022, 1, 28, 14, 29, 43, 606, DateTimeKind.Local).AddTicks(3791),
+                            updatedate = new DateTime(2022, 1, 28, 14, 41, 3, 530, DateTimeKind.Local).AddTicks(5463),
                             updatedby = "Seed Data"
                         });
                 });
@@ -190,66 +190,66 @@ namespace SchoolApp.Infrastructure.Migrations
                         {
                             id = 1,
                             birthdate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            createdate = new DateTime(2022, 1, 28, 14, 29, 43, 606, DateTimeKind.Local).AddTicks(3995),
+                            createdate = new DateTime(2022, 1, 28, 14, 41, 3, 530, DateTimeKind.Local).AddTicks(5790),
                             createdby = "Seed Data",
                             firstname = "Marouane",
                             lastname = "EL MABROUK",
-                            updatedate = new DateTime(2022, 1, 28, 14, 29, 43, 606, DateTimeKind.Local).AddTicks(3999),
+                            updatedate = new DateTime(2022, 1, 28, 14, 41, 3, 530, DateTimeKind.Local).AddTicks(5795),
                             updatedby = "Seed Data"
                         },
                         new
                         {
                             id = 2,
                             birthdate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            createdate = new DateTime(2022, 1, 28, 14, 29, 43, 606, DateTimeKind.Local).AddTicks(4004),
+                            createdate = new DateTime(2022, 1, 28, 14, 41, 3, 530, DateTimeKind.Local).AddTicks(5799),
                             createdby = "Seed Data",
                             firstname = "Smith",
                             lastname = "JOHN",
-                            updatedate = new DateTime(2022, 1, 28, 14, 29, 43, 606, DateTimeKind.Local).AddTicks(4005),
+                            updatedate = new DateTime(2022, 1, 28, 14, 41, 3, 530, DateTimeKind.Local).AddTicks(5801),
                             updatedby = "Seed Data"
                         },
                         new
                         {
                             id = 3,
                             birthdate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            createdate = new DateTime(2022, 1, 28, 14, 29, 43, 606, DateTimeKind.Local).AddTicks(4007),
+                            createdate = new DateTime(2022, 1, 28, 14, 41, 3, 530, DateTimeKind.Local).AddTicks(5804),
                             createdby = "Seed Data",
                             firstname = "William",
                             lastname = "MILLER",
-                            updatedate = new DateTime(2022, 1, 28, 14, 29, 43, 606, DateTimeKind.Local).AddTicks(4009),
+                            updatedate = new DateTime(2022, 1, 28, 14, 41, 3, 530, DateTimeKind.Local).AddTicks(5805),
                             updatedby = "Seed Data"
                         },
                         new
                         {
                             id = 4,
                             birthdate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            createdate = new DateTime(2022, 1, 28, 14, 29, 43, 606, DateTimeKind.Local).AddTicks(4040),
+                            createdate = new DateTime(2022, 1, 28, 14, 41, 3, 530, DateTimeKind.Local).AddTicks(5808),
                             createdby = "Seed Data",
                             firstname = "Prof",
                             lastname = "EL MABROUK",
-                            updatedate = new DateTime(2022, 1, 28, 14, 29, 43, 606, DateTimeKind.Local).AddTicks(4041),
+                            updatedate = new DateTime(2022, 1, 28, 14, 41, 3, 530, DateTimeKind.Local).AddTicks(5810),
                             updatedby = "Seed Data"
                         },
                         new
                         {
                             id = 5,
                             birthdate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            createdate = new DateTime(2022, 1, 28, 14, 29, 43, 606, DateTimeKind.Local).AddTicks(4044),
+                            createdate = new DateTime(2022, 1, 28, 14, 41, 3, 530, DateTimeKind.Local).AddTicks(5812),
                             createdby = "Seed Data",
                             firstname = "Prof",
                             lastname = "JOHN",
-                            updatedate = new DateTime(2022, 1, 28, 14, 29, 43, 606, DateTimeKind.Local).AddTicks(4045),
+                            updatedate = new DateTime(2022, 1, 28, 14, 41, 3, 530, DateTimeKind.Local).AddTicks(5814),
                             updatedby = "Seed Data"
                         },
                         new
                         {
                             id = 6,
                             birthdate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            createdate = new DateTime(2022, 1, 28, 14, 29, 43, 606, DateTimeKind.Local).AddTicks(4049),
+                            createdate = new DateTime(2022, 1, 28, 14, 41, 3, 530, DateTimeKind.Local).AddTicks(5818),
                             createdby = "Seed Data",
                             firstname = "Prof",
                             lastname = "MILLER",
-                            updatedate = new DateTime(2022, 1, 28, 14, 29, 43, 606, DateTimeKind.Local).AddTicks(4050),
+                            updatedate = new DateTime(2022, 1, 28, 14, 41, 3, 530, DateTimeKind.Local).AddTicks(5820),
                             updatedby = "Seed Data"
                         });
                 });
@@ -290,31 +290,31 @@ namespace SchoolApp.Infrastructure.Migrations
                         new
                         {
                             id = 1,
-                            createdate = new DateTime(2022, 1, 28, 14, 29, 43, 606, DateTimeKind.Local).AddTicks(5093),
+                            createdate = new DateTime(2022, 1, 28, 14, 41, 3, 530, DateTimeKind.Local).AddTicks(6962),
                             createdby = "Seed Data",
                             personid = 4,
                             profcode = "CODE_1",
-                            updatedate = new DateTime(2022, 1, 28, 14, 29, 43, 606, DateTimeKind.Local).AddTicks(5103),
+                            updatedate = new DateTime(2022, 1, 28, 14, 41, 3, 530, DateTimeKind.Local).AddTicks(6972),
                             updatedby = "Seed Data"
                         },
                         new
                         {
                             id = 2,
-                            createdate = new DateTime(2022, 1, 28, 14, 29, 43, 606, DateTimeKind.Local).AddTicks(5108),
+                            createdate = new DateTime(2022, 1, 28, 14, 41, 3, 530, DateTimeKind.Local).AddTicks(6977),
                             createdby = "Seed Data",
                             personid = 5,
                             profcode = "CODE_2",
-                            updatedate = new DateTime(2022, 1, 28, 14, 29, 43, 606, DateTimeKind.Local).AddTicks(5109),
+                            updatedate = new DateTime(2022, 1, 28, 14, 41, 3, 530, DateTimeKind.Local).AddTicks(6979),
                             updatedby = "Seed Data"
                         },
                         new
                         {
                             id = 3,
-                            createdate = new DateTime(2022, 1, 28, 14, 29, 43, 606, DateTimeKind.Local).AddTicks(5111),
+                            createdate = new DateTime(2022, 1, 28, 14, 41, 3, 530, DateTimeKind.Local).AddTicks(6981),
                             createdby = "Seed Data",
                             personid = 6,
                             profcode = "CODE_3",
-                            updatedate = new DateTime(2022, 1, 28, 14, 29, 43, 606, DateTimeKind.Local).AddTicks(5113),
+                            updatedate = new DateTime(2022, 1, 28, 14, 41, 3, 530, DateTimeKind.Local).AddTicks(6983),
                             updatedby = "Seed Data"
                         });
                 });
@@ -356,34 +356,34 @@ namespace SchoolApp.Infrastructure.Migrations
                         new
                         {
                             id = 1,
-                            createdate = new DateTime(2022, 1, 28, 14, 29, 43, 606, DateTimeKind.Local).AddTicks(5377),
+                            createdate = new DateTime(2022, 1, 28, 14, 41, 3, 530, DateTimeKind.Local).AddTicks(7266),
                             createdby = "Seed Data",
                             description = "Super Administrator Description",
                             role = 1,
                             title = "Super Administrator",
-                            updatedate = new DateTime(2022, 1, 28, 14, 29, 43, 606, DateTimeKind.Local).AddTicks(5381),
+                            updatedate = new DateTime(2022, 1, 28, 14, 41, 3, 530, DateTimeKind.Local).AddTicks(7270),
                             updatedby = "Seed Data"
                         },
                         new
                         {
                             id = 2,
-                            createdate = new DateTime(2022, 1, 28, 14, 29, 43, 606, DateTimeKind.Local).AddTicks(5384),
+                            createdate = new DateTime(2022, 1, 28, 14, 41, 3, 530, DateTimeKind.Local).AddTicks(7277),
                             createdby = "Seed Data",
                             description = "Administrator Description",
                             role = 2,
                             title = "Administrator",
-                            updatedate = new DateTime(2022, 1, 28, 14, 29, 43, 606, DateTimeKind.Local).AddTicks(5386),
+                            updatedate = new DateTime(2022, 1, 28, 14, 41, 3, 530, DateTimeKind.Local).AddTicks(7279),
                             updatedby = "Seed Data"
                         },
                         new
                         {
                             id = 3,
-                            createdate = new DateTime(2022, 1, 28, 14, 29, 43, 606, DateTimeKind.Local).AddTicks(5388),
+                            createdate = new DateTime(2022, 1, 28, 14, 41, 3, 530, DateTimeKind.Local).AddTicks(7281),
                             createdby = "Seed Data",
                             description = "User Description",
                             role = 3,
                             title = "User",
-                            updatedate = new DateTime(2022, 1, 28, 14, 29, 43, 606, DateTimeKind.Local).AddTicks(5390),
+                            updatedate = new DateTime(2022, 1, 28, 14, 41, 3, 530, DateTimeKind.Local).AddTicks(7283),
                             updatedby = "Seed Data"
                         });
                 });
@@ -426,31 +426,31 @@ namespace SchoolApp.Infrastructure.Migrations
                         new
                         {
                             id = 1,
-                            createdate = new DateTime(2022, 1, 28, 14, 29, 43, 606, DateTimeKind.Local).AddTicks(7117),
+                            createdate = new DateTime(2022, 1, 28, 14, 41, 3, 530, DateTimeKind.Local).AddTicks(9139),
                             createdby = "Seed Data",
                             levelid = 1,
                             personid = 1,
-                            updatedate = new DateTime(2022, 1, 28, 14, 29, 43, 606, DateTimeKind.Local).AddTicks(7127),
+                            updatedate = new DateTime(2022, 1, 28, 14, 41, 3, 530, DateTimeKind.Local).AddTicks(9149),
                             updatedby = "Seed Data"
                         },
                         new
                         {
                             id = 2,
-                            createdate = new DateTime(2022, 1, 28, 14, 29, 43, 606, DateTimeKind.Local).AddTicks(7132),
+                            createdate = new DateTime(2022, 1, 28, 14, 41, 3, 530, DateTimeKind.Local).AddTicks(9154),
                             createdby = "Seed Data",
                             levelid = 2,
                             personid = 2,
-                            updatedate = new DateTime(2022, 1, 28, 14, 29, 43, 606, DateTimeKind.Local).AddTicks(7133),
+                            updatedate = new DateTime(2022, 1, 28, 14, 41, 3, 530, DateTimeKind.Local).AddTicks(9155),
                             updatedby = "Seed Data"
                         },
                         new
                         {
                             id = 3,
-                            createdate = new DateTime(2022, 1, 28, 14, 29, 43, 606, DateTimeKind.Local).AddTicks(7135),
+                            createdate = new DateTime(2022, 1, 28, 14, 41, 3, 530, DateTimeKind.Local).AddTicks(9158),
                             createdby = "Seed Data",
                             levelid = 3,
                             personid = 3,
-                            updatedate = new DateTime(2022, 1, 28, 14, 29, 43, 606, DateTimeKind.Local).AddTicks(7137),
+                            updatedate = new DateTime(2022, 1, 28, 14, 41, 3, 530, DateTimeKind.Local).AddTicks(9160),
                             updatedby = "Seed Data"
                         });
                 });
@@ -499,37 +499,37 @@ namespace SchoolApp.Infrastructure.Migrations
                         new
                         {
                             id = 1,
-                            createdate = new DateTime(2022, 1, 28, 14, 29, 43, 607, DateTimeKind.Local).AddTicks(1972),
+                            createdate = new DateTime(2022, 1, 28, 14, 41, 3, 531, DateTimeKind.Local).AddTicks(4441),
                             createdby = "Seed Data",
                             email = "user1@mail.com",
                             password = "ba3253876aed6bc22d4a6ff53d8406c6ad864195ed144ab5c87621b6c233b548baeae6956df346ec8c17f5ea10f35ee3cbc514797ed7ddd3145464e2a0bab413",
                             personid = 1,
                             roleid = 1,
-                            updatedate = new DateTime(2022, 1, 28, 14, 29, 43, 607, DateTimeKind.Local).AddTicks(1982),
+                            updatedate = new DateTime(2022, 1, 28, 14, 41, 3, 531, DateTimeKind.Local).AddTicks(4454),
                             updatedby = "Seed Data"
                         },
                         new
                         {
                             id = 2,
-                            createdate = new DateTime(2022, 1, 28, 14, 29, 43, 607, DateTimeKind.Local).AddTicks(2020),
+                            createdate = new DateTime(2022, 1, 28, 14, 41, 3, 531, DateTimeKind.Local).AddTicks(4528),
                             createdby = "Seed Data",
                             email = "user2@mail.com",
                             password = "ba3253876aed6bc22d4a6ff53d8406c6ad864195ed144ab5c87621b6c233b548baeae6956df346ec8c17f5ea10f35ee3cbc514797ed7ddd3145464e2a0bab413",
                             personid = 2,
                             roleid = 2,
-                            updatedate = new DateTime(2022, 1, 28, 14, 29, 43, 607, DateTimeKind.Local).AddTicks(2021),
+                            updatedate = new DateTime(2022, 1, 28, 14, 41, 3, 531, DateTimeKind.Local).AddTicks(4530),
                             updatedby = "Seed Data"
                         },
                         new
                         {
                             id = 3,
-                            createdate = new DateTime(2022, 1, 28, 14, 29, 43, 607, DateTimeKind.Local).AddTicks(2076),
+                            createdate = new DateTime(2022, 1, 28, 14, 41, 3, 531, DateTimeKind.Local).AddTicks(4566),
                             createdby = "Seed Data",
                             email = "user3@mail.com",
                             password = "ba3253876aed6bc22d4a6ff53d8406c6ad864195ed144ab5c87621b6c233b548baeae6956df346ec8c17f5ea10f35ee3cbc514797ed7ddd3145464e2a0bab413",
                             personid = 3,
                             roleid = 3,
-                            updatedate = new DateTime(2022, 1, 28, 14, 29, 43, 607, DateTimeKind.Local).AddTicks(2078),
+                            updatedate = new DateTime(2022, 1, 28, 14, 41, 3, 531, DateTimeKind.Local).AddTicks(4569),
                             updatedby = "Seed Data"
                         });
                 });
