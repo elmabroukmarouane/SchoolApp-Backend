@@ -1,12 +1,10 @@
-
-using Microsoft.Extensions.Configuration;
 using SchoSchoolApp.Client.Extensions.Add;
 using SchoSchoolApp.Client.Extensions.Use;
 
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
-
+AppContext.SetSwitch("Npgsql.EnableLegacyTimestampBehavior", true); // Added to bypass Local UTC Datetime with PostgreSQL
 builder.Services.AddControllers();
 // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
 builder.Services.AddEndpointsApiExplorer();

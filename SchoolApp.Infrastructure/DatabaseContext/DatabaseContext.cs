@@ -6,17 +6,17 @@ using System.Reflection;
 using System.Text;
 
 namespace SchoolApp.Infrastructure.DatabaseContext;
-public class DatabaseContext : DbContext
+public class DatabaseContextSchool : DbContext
     {
-        public DbSet<Course>? courses { get; set; }
-        public DbSet<Level>? levels { get; set; }
         public DbSet<Person>? persons { get; set; }
+        public DbSet<Level>? levels { get; set; }
         public DbSet<Role>? roles { get; set; }
-        public DbSet<User>? users { get; set; }
         public DbSet<Professor>? professors { get; set; }
         public DbSet<Student>? students { get; set; }
+        public DbSet<User>? users { get; set; }
+        public DbSet<Course>? courses { get; set; }
 
-        public DatabaseContext(DbContextOptions<DatabaseContext> options) : base(options) { }
+        public DatabaseContextSchool(DbContextOptions<DatabaseContextSchool> options) : base(options) { }
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
             modelBuilder.ApplyConfigurationsFromAssembly(Assembly.GetExecutingAssembly());

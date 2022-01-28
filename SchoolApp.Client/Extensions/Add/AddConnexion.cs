@@ -10,7 +10,7 @@ public static class AddConnexion
     public static void AddConnection(this IServiceCollection self, IConfiguration configuration,
         IHostEnvironment env)
     {
-        self.AddDbContext<DatabaseContext>(options =>
+        self.AddDbContext<DatabaseContextSchool>(options =>
         {
             switch (configuration.GetSection("ConnectionType").Value)
             {

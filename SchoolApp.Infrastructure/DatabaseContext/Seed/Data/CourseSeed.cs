@@ -11,7 +11,7 @@ public class CourseSeed
             {
                 id = 1,
                 studentid = 1,
-                professorid = 4,
+                professorid = 1,
                 coursename = "Course 1",
                 createdate = DateTime.Now,
                 createdby = "Seed Data",
@@ -22,7 +22,7 @@ public class CourseSeed
             {
                 id = 2,
                 studentid = 2,
-                professorid = 5,
+                professorid = 2,
                 coursename = "Course 2",
                 createdate = DateTime.Now,
                 createdby = "Seed Data",
@@ -33,7 +33,7 @@ public class CourseSeed
             {
                 id = 3,
                 studentid = 3,
-                professorid = 6,
+                professorid = 3,
                 coursename = "Course 3",
                 createdate = DateTime.Now,
                 createdby = "Seed Data",
