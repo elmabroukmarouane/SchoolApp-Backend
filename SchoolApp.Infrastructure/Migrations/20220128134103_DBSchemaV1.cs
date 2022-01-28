@@ -184,9 +184,9 @@ namespace SchoolApp.Infrastructure.Migrations
                 columns: new[] { "id", "createdate", "createdby", "levelname", "updatedate", "updatedby" },
                 values: new object[,]
                 {
-                    { 1, new DateTime(2022, 1, 28, 14, 29, 43, 606, DateTimeKind.Local).AddTicks(3737), "Seed Data", "Level 1", new DateTime(2022, 1, 28, 14, 29, 43, 606, DateTimeKind.Local).AddTicks(3781), "Seed Data" },
-                    { 2, new DateTime(2022, 1, 28, 14, 29, 43, 606, DateTimeKind.Local).AddTicks(3786), "Seed Data", "Level 2", new DateTime(2022, 1, 28, 14, 29, 43, 606, DateTimeKind.Local).AddTicks(3787), "Seed Data" },
-                    { 3, new DateTime(2022, 1, 28, 14, 29, 43, 606, DateTimeKind.Local).AddTicks(3789), "Seed Data", "Level 3", new DateTime(2022, 1, 28, 14, 29, 43, 606, DateTimeKind.Local).AddTicks(3791), "Seed Data" }
+                    { 1, new DateTime(2022, 1, 28, 14, 41, 3, 530, DateTimeKind.Local).AddTicks(5406), "Seed Data", "Level 1", new DateTime(2022, 1, 28, 14, 41, 3, 530, DateTimeKind.Local).AddTicks(5453), "Seed Data" },
+                    { 2, new DateTime(2022, 1, 28, 14, 41, 3, 530, DateTimeKind.Local).AddTicks(5457), "Seed Data", "Level 2", new DateTime(2022, 1, 28, 14, 41, 3, 530, DateTimeKind.Local).AddTicks(5459), "Seed Data" },
+                    { 3, new DateTime(2022, 1, 28, 14, 41, 3, 530, DateTimeKind.Local).AddTicks(5462), "Seed Data", "Level 3", new DateTime(2022, 1, 28, 14, 41, 3, 530, DateTimeKind.Local).AddTicks(5463), "Seed Data" }
                 });
 
             migrationBuilder.InsertData(
@@ -194,12 +194,12 @@ namespace SchoolApp.Infrastructure.Migrations
                 columns: new[] { "id", "birthdate", "createdate", "createdby", "firstname", "lastname", "updatedate", "updatedby" },
                 values: new object[,]
                 {
-                    { 1, new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified), new DateTime(2022, 1, 28, 14, 29, 43, 606, DateTimeKind.Local).AddTicks(3995), "Seed Data", "Marouane", "EL MABROUK", new DateTime(2022, 1, 28, 14, 29, 43, 606, DateTimeKind.Local).AddTicks(3999), "Seed Data" },
-                    { 2, new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified), new DateTime(2022, 1, 28, 14, 29, 43, 606, DateTimeKind.Local).AddTicks(4004), "Seed Data", "Smith", "JOHN", new DateTime(2022, 1, 28, 14, 29, 43, 606, DateTimeKind.Local).AddTicks(4005), "Seed Data" },
-                    { 3, new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified), new DateTime(2022, 1, 28, 14, 29, 43, 606, DateTimeKind.Local).AddTicks(4007), "Seed Data", "William", "MILLER", new DateTime(2022, 1, 28, 14, 29, 43, 606, DateTimeKind.Local).AddTicks(4009), "Seed Data" },
-                    { 4, new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified), new DateTime(2022, 1, 28, 14, 29, 43, 606, DateTimeKind.Local).AddTicks(4040), "Seed Data", "Prof", "EL MABROUK", new DateTime(2022, 1, 28, 14, 29, 43, 606, DateTimeKind.Local).AddTicks(4041), "Seed Data" },
-                    { 5, new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified), new DateTime(2022, 1, 28, 14, 29, 43, 606, DateTimeKind.Local).AddTicks(4044), "Seed Data", "Prof", "JOHN", new DateTime(2022, 1, 28, 14, 29, 43, 606, DateTimeKind.Local).AddTicks(4045), "Seed Data" },
-                    { 6, new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified), new DateTime(2022, 1, 28, 14, 29, 43, 606, DateTimeKind.Local).AddTicks(4049), "Seed Data", "Prof", "MILLER", new DateTime(2022, 1, 28, 14, 29, 43, 606, DateTimeKind.Local).AddTicks(4050), "Seed Data" }
+                    { 1, new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified), new DateTime(2022, 1, 28, 14, 41, 3, 530, DateTimeKind.Local).AddTicks(5790), "Seed Data", "Marouane", "EL MABROUK", new DateTime(2022, 1, 28, 14, 41, 3, 530, DateTimeKind.Local).AddTicks(5795), "Seed Data" },
+                    { 2, new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified), new DateTime(2022, 1, 28, 14, 41, 3, 530, DateTimeKind.Local).AddTicks(5799), "Seed Data", "Smith", "JOHN", new DateTime(2022, 1, 28, 14, 41, 3, 530, DateTimeKind.Local).AddTicks(5801), "Seed Data" },
+                    { 3, new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified), new DateTime(2022, 1, 28, 14, 41, 3, 530, DateTimeKind.Local).AddTicks(5804), "Seed Data", "William", "MILLER", new DateTime(2022, 1, 28, 14, 41, 3, 530, DateTimeKind.Local).AddTicks(5805), "Seed Data" },
+                    { 4, new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified), new DateTime(2022, 1, 28, 14, 41, 3, 530, DateTimeKind.Local).AddTicks(5808), "Seed Data", "Prof", "EL MABROUK", new DateTime(2022, 1, 28, 14, 41, 3, 530, DateTimeKind.Local).AddTicks(5810), "Seed Data" },
+                    { 5, new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified), new DateTime(2022, 1, 28, 14, 41, 3, 530, DateTimeKind.Local).AddTicks(5812), "Seed Data", "Prof", "JOHN", new DateTime(2022, 1, 28, 14, 41, 3, 530, DateTimeKind.Local).AddTicks(5814), "Seed Data" },
+                    { 6, new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified), new DateTime(2022, 1, 28, 14, 41, 3, 530, DateTimeKind.Local).AddTicks(5818), "Seed Data", "Prof", "MILLER", new DateTime(2022, 1, 28, 14, 41, 3, 530, DateTimeKind.Local).AddTicks(5820), "Seed Data" }
                 });
 
             migrationBuilder.InsertData(
@@ -207,9 +207,9 @@ namespace SchoolApp.Infrastructure.Migrations
                 columns: new[] { "id", "createdate", "createdby", "description", "role", "title", "updatedate", "updatedby" },
                 values: new object[,]
                 {
-                    { 1, new DateTime(2022, 1, 28, 14, 29, 43, 606, DateTimeKind.Local).AddTicks(5377), "Seed Data", "Super Administrator Description", 1, "Super Administrator", new DateTime(2022, 1, 28, 14, 29, 43, 606, DateTimeKind.Local).AddTicks(5381), "Seed Data" },
-                    { 2, new DateTime(2022, 1, 28, 14, 29, 43, 606, DateTimeKind.Local).AddTicks(5384), "Seed Data", "Administrator Description", 2, "Administrator", new DateTime(2022, 1, 28, 14, 29, 43, 606, DateTimeKind.Local).AddTicks(5386), "Seed Data" },
-                    { 3, new DateTime(2022, 1, 28, 14, 29, 43, 606, DateTimeKind.Local).AddTicks(5388), "Seed Data", "User Description", 3, "User", new DateTime(2022, 1, 28, 14, 29, 43, 606, DateTimeKind.Local).AddTicks(5390), "Seed Data" }
+                    { 1, new DateTime(2022, 1, 28, 14, 41, 3, 530, DateTimeKind.Local).AddTicks(7266), "Seed Data", "Super Administrator Description", 1, "Super Administrator", new DateTime(2022, 1, 28, 14, 41, 3, 530, DateTimeKind.Local).AddTicks(7270), "Seed Data" },
+                    { 2, new DateTime(2022, 1, 28, 14, 41, 3, 530, DateTimeKind.Local).AddTicks(7277), "Seed Data", "Administrator Description", 2, "Administrator", new DateTime(2022, 1, 28, 14, 41, 3, 530, DateTimeKind.Local).AddTicks(7279), "Seed Data" },
+                    { 3, new DateTime(2022, 1, 28, 14, 41, 3, 530, DateTimeKind.Local).AddTicks(7281), "Seed Data", "User Description", 3, "User", new DateTime(2022, 1, 28, 14, 41, 3, 530, DateTimeKind.Local).AddTicks(7283), "Seed Data" }
                 });
 
             migrationBuilder.InsertData(
@@ -217,9 +217,9 @@ namespace SchoolApp.Infrastructure.Migrations
                 columns: new[] { "id", "createdate", "createdby", "personid", "profcode", "updatedate", "updatedby" },
                 values: new object[,]
                 {
-                    { 1, new DateTime(2022, 1, 28, 14, 29, 43, 606, DateTimeKind.Local).AddTicks(5093), "Seed Data", 4, "CODE_1", new DateTime(2022, 1, 28, 14, 29, 43, 606, DateTimeKind.Local).AddTicks(5103), "Seed Data" },
-                    { 2, new DateTime(2022, 1, 28, 14, 29, 43, 606, DateTimeKind.Local).AddTicks(5108), "Seed Data", 5, "CODE_2", new DateTime(2022, 1, 28, 14, 29, 43, 606, DateTimeKind.Local).AddTicks(5109), "Seed Data" },
-                    { 3, new DateTime(2022, 1, 28, 14, 29, 43, 606, DateTimeKind.Local).AddTicks(5111), "Seed Data", 6, "CODE_3", new DateTime(2022, 1, 28, 14, 29, 43, 606, DateTimeKind.Local).AddTicks(5113), "Seed Data" }
+                    { 1, new DateTime(2022, 1, 28, 14, 41, 3, 530, DateTimeKind.Local).AddTicks(6962), "Seed Data", 4, "CODE_1", new DateTime(2022, 1, 28, 14, 41, 3, 530, DateTimeKind.Local).AddTicks(6972), "Seed Data" },
+                    { 2, new DateTime(2022, 1, 28, 14, 41, 3, 530, DateTimeKind.Local).AddTicks(6977), "Seed Data", 5, "CODE_2", new DateTime(2022, 1, 28, 14, 41, 3, 530, DateTimeKind.Local).AddTicks(6979), "Seed Data" },
+                    { 3, new DateTime(2022, 1, 28, 14, 41, 3, 530, DateTimeKind.Local).AddTicks(6981), "Seed Data", 6, "CODE_3", new DateTime(2022, 1, 28, 14, 41, 3, 530, DateTimeKind.Local).AddTicks(6983), "Seed Data" }
                 });
 
             migrationBuilder.InsertData(
@@ -227,9 +227,9 @@ namespace SchoolApp.Infrastructure.Migrations
                 columns: new[] { "id", "createdate", "createdby", "levelid", "personid", "updatedate", "updatedby" },
                 values: new object[,]
                 {
-                    { 1, new DateTime(2022, 1, 28, 14, 29, 43, 606, DateTimeKind.Local).AddTicks(7117), "Seed Data", 1, 1, new DateTime(2022, 1, 28, 14, 29, 43, 606, DateTimeKind.Local).AddTicks(7127), "Seed Data" },
-                    { 2, new DateTime(2022, 1, 28, 14, 29, 43, 606, DateTimeKind.Local).AddTicks(7132), "Seed Data", 2, 2, new DateTime(2022, 1, 28, 14, 29, 43, 606, DateTimeKind.Local).AddTicks(7133), "Seed Data" },
-                    { 3, new DateTime(2022, 1, 28, 14, 29, 43, 606, DateTimeKind.Local).AddTicks(7135), "Seed Data", 3, 3, new DateTime(2022, 1, 28, 14, 29, 43, 606, DateTimeKind.Local).AddTicks(7137), "Seed Data" }
+                    { 1, new DateTime(2022, 1, 28, 14, 41, 3, 530, DateTimeKind.Local).AddTicks(9139), "Seed Data", 1, 1, new DateTime(2022, 1, 28, 14, 41, 3, 530, DateTimeKind.Local).AddTicks(9149), "Seed Data" },
+                    { 2, new DateTime(2022, 1, 28, 14, 41, 3, 530, DateTimeKind.Local).AddTicks(9154), "Seed Data", 2, 2, new DateTime(2022, 1, 28, 14, 41, 3, 530, DateTimeKind.Local).AddTicks(9155), "Seed Data" },
+                    { 3, new DateTime(2022, 1, 28, 14, 41, 3, 530, DateTimeKind.Local).AddTicks(9158), "Seed Data", 3, 3, new DateTime(2022, 1, 28, 14, 41, 3, 530, DateTimeKind.Local).AddTicks(9160), "Seed Data" }
                 });
 
             migrationBuilder.InsertData(
@@ -237,25 +237,25 @@ namespace SchoolApp.Infrastructure.Migrations
                 columns: new[] { "id", "createdate", "createdby", "email", "password", "personid", "roleid", "updatedate", "updatedby" },
                 values: new object[,]
                 {
-                    { 1, new DateTime(2022, 1, 28, 14, 29, 43, 607, DateTimeKind.Local).AddTicks(1972), "Seed Data", "user1@mail.com", "ba3253876aed6bc22d4a6ff53d8406c6ad864195ed144ab5c87621b6c233b548baeae6956df346ec8c17f5ea10f35ee3cbc514797ed7ddd3145464e2a0bab413", 1, 1, new DateTime(2022, 1, 28, 14, 29, 43, 607, DateTimeKind.Local).AddTicks(1982), "Seed Data" },
-                    { 2, new DateTime(2022, 1, 28, 14, 29, 43, 607, DateTimeKind.Local).AddTicks(2020), "Seed Data", "user2@mail.com", "ba3253876aed6bc22d4a6ff53d8406c6ad864195ed144ab5c87621b6c233b548baeae6956df346ec8c17f5ea10f35ee3cbc514797ed7ddd3145464e2a0bab413", 2, 2, new DateTime(2022, 1, 28, 14, 29, 43, 607, DateTimeKind.Local).AddTicks(2021), "Seed Data" },
-                    { 3, new DateTime(2022, 1, 28, 14, 29, 43, 607, DateTimeKind.Local).AddTicks(2076), "Seed Data", "user3@mail.com", "ba3253876aed6bc22d4a6ff53d8406c6ad864195ed144ab5c87621b6c233b548baeae6956df346ec8c17f5ea10f35ee3cbc514797ed7ddd3145464e2a0bab413", 3, 3, new DateTime(2022, 1, 28, 14, 29, 43, 607, DateTimeKind.Local).AddTicks(2078), "Seed Data" }
+                    { 1, new DateTime(2022, 1, 28, 14, 41, 3, 531, DateTimeKind.Local).AddTicks(4441), "Seed Data", "user1@mail.com", "ba3253876aed6bc22d4a6ff53d8406c6ad864195ed144ab5c87621b6c233b548baeae6956df346ec8c17f5ea10f35ee3cbc514797ed7ddd3145464e2a0bab413", 1, 1, new DateTime(2022, 1, 28, 14, 41, 3, 531, DateTimeKind.Local).AddTicks(4454), "Seed Data" },
+                    { 2, new DateTime(2022, 1, 28, 14, 41, 3, 531, DateTimeKind.Local).AddTicks(4528), "Seed Data", "user2@mail.com", "ba3253876aed6bc22d4a6ff53d8406c6ad864195ed144ab5c87621b6c233b548baeae6956df346ec8c17f5ea10f35ee3cbc514797ed7ddd3145464e2a0bab413", 2, 2, new DateTime(2022, 1, 28, 14, 41, 3, 531, DateTimeKind.Local).AddTicks(4530), "Seed Data" },
+                    { 3, new DateTime(2022, 1, 28, 14, 41, 3, 531, DateTimeKind.Local).AddTicks(4566), "Seed Data", "user3@mail.com", "ba3253876aed6bc22d4a6ff53d8406c6ad864195ed144ab5c87621b6c233b548baeae6956df346ec8c17f5ea10f35ee3cbc514797ed7ddd3145464e2a0bab413", 3, 3, new DateTime(2022, 1, 28, 14, 41, 3, 531, DateTimeKind.Local).AddTicks(4569), "Seed Data" }
                 });
 
             migrationBuilder.InsertData(
                 table: "courses",
                 columns: new[] { "id", "coursename", "createdate", "createdby", "professorid", "studentid", "updatedate", "updatedby" },
-                values: new object[] { 1, "Course 1", new DateTime(2022, 1, 28, 14, 29, 43, 606, DateTimeKind.Local).AddTicks(9723), "Seed Data", 1, 1, new DateTime(2022, 1, 28, 14, 29, 43, 606, DateTimeKind.Local).AddTicks(9735), "Seed Data" });
+                values: new object[] { 1, "Course 1", new DateTime(2022, 1, 28, 14, 41, 3, 531, DateTimeKind.Local).AddTicks(1962), "Seed Data", 1, 1, new DateTime(2022, 1, 28, 14, 41, 3, 531, DateTimeKind.Local).AddTicks(1977), "Seed Data" });
 
             migrationBuilder.InsertData(
                 table: "courses",
                 columns: new[] { "id", "coursename", "createdate", "createdby", "professorid", "studentid", "updatedate", "updatedby" },
-                values: new object[] { 2, "Course 2", new DateTime(2022, 1, 28, 14, 29, 43, 606, DateTimeKind.Local).AddTicks(9740), "Seed Data", 2, 2, new DateTime(2022, 1, 28, 14, 29, 43, 606, DateTimeKind.Local).AddTicks(9742), "Seed Data" });
+                values: new object[] { 2, "Course 2", new DateTime(2022, 1, 28, 14, 41, 3, 531, DateTimeKind.Local).AddTicks(1982), "Seed Data", 2, 2, new DateTime(2022, 1, 28, 14, 41, 3, 531, DateTimeKind.Local).AddTicks(1984), "Seed Data" });
 
             migrationBuilder.InsertData(
                 table: "courses",
                 columns: new[] { "id", "coursename", "createdate", "createdby", "professorid", "studentid", "updatedate", "updatedby" },
-                values: new object[] { 3, "Course 3", new DateTime(2022, 1, 28, 14, 29, 43, 606, DateTimeKind.Local).AddTicks(9744), "Seed Data", 3, 3, new DateTime(2022, 1, 28, 14, 29, 43, 606, DateTimeKind.Local).AddTicks(9745), "Seed Data" });
+                values: new object[] { 3, "Course 3", new DateTime(2022, 1, 28, 14, 41, 3, 531, DateTimeKind.Local).AddTicks(1986), "Seed Data", 3, 3, new DateTime(2022, 1, 28, 14, 41, 3, 531, DateTimeKind.Local).AddTicks(1988), "Seed Data" });
 
             migrationBuilder.CreateIndex(
                 name: "IX_courses_professorid",
