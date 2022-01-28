@@ -12,11 +12,11 @@ public class CourseConfiguration : IEntityTypeConfiguration<Course>
         builder.HasOne(c => c.professor)
               .WithMany(p => p.courses)
               .HasForeignKey(c => c.professorid)
-              .OnDelete(DeleteBehavior.Cascade);
+              .OnDelete(DeleteBehavior.NoAction);
         builder.HasOne(c => c.student)
                .WithMany(s => s.courses)
                .HasForeignKey(c => c.studentid)
-               .OnDelete(DeleteBehavior.Cascade);
+               .OnDelete(DeleteBehavior.NoAction);
         builder.Seed();
     }
 }

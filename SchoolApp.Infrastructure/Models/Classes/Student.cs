@@ -1,5 +1,5 @@
 namespace SchoolApp.Infrastructure.Models.Classes;
-public class Student : Person
+public class Student : Entity
 {
     public int personid { get; set; }
     public int levelid { get; set; }
