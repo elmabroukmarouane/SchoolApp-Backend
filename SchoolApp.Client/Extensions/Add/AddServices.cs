@@ -27,6 +27,14 @@ public static class AddServices
         self.AddTransient<IGenericCommandService<Person>, GenericCommandService<Person>>();
         self.AddTransient<IGenericQueryService<User>, GenericQueryService<User>>();
         self.AddTransient<IGenericCommandService<User>, GenericCommandService<User>>();
+        self.AddTransient<IGenericQueryService<Level>, GenericQueryService<Level>>();
+        self.AddTransient<IGenericCommandService<Level>, GenericCommandService<Level>>();
+        self.AddTransient<IGenericQueryService<Course>, GenericQueryService<Course>>();
+        self.AddTransient<IGenericCommandService<Course>, GenericCommandService<Course>>();
+        self.AddTransient<IGenericQueryService<Professor>, GenericQueryService<Professor>>();
+        self.AddTransient<IGenericCommandService<Professor>, GenericCommandService<Professor>>();
+        self.AddTransient<IGenericQueryService<Student>, GenericQueryService<Student>>();
+        self.AddTransient<IGenericCommandService<Student>, GenericCommandService<Student>>();
 
         self.AddTransient<IAuthenticationService, AuthenticationService>();
 

@@ -6,5 +6,7 @@ public class PersonViewModel : Entity
     public string? firstname { get; set; }
     public string? lastname { get; set; }
     public DateTime birthdate { get; set; }
-    public virtual ICollection<UserViewModel> users { get; set; }
+    public virtual ICollection<UserViewModel>? users { get; set; }
+    public virtual ICollection<ProfessorViewModel>? professors { get; set; }
+    public virtual ICollection<StudentViewModel>? students { get; set; }
 }

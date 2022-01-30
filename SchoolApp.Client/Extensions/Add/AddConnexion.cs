@@ -101,7 +101,7 @@ public static class AddConnexion
                 options.UseNpgsql(
                             connectionString,
                             options => options.EnableRetryOnFailure()
-                        ).EnableSensitiveDataLogging();
+                        ).EnableSensitiveDataLogging().EnableDetailedErrors();
             }
             options.UseNpgsql(
                 connectionString,
@@ -116,7 +116,7 @@ public static class AddConnexion
             {
                 options.UseSqlite(
                     configuration.GetConnectionString(connectionString)
-                   ).EnableSensitiveDataLogging();
+                   ).EnableSensitiveDataLogging().EnableDetailedErrors();;
             }
             options.UseSqlite(
                 configuration.GetConnectionString(connectionString)
