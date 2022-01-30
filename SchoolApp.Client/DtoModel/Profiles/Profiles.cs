@@ -13,5 +13,13 @@ public class Profiles : Profile
         CreateMap<UserViewModel, User>();
         CreateMap<Person, PersonViewModel>();
         CreateMap<PersonViewModel, Person>();
+        CreateMap<Level, LevelViewModel>();
+        CreateMap<LevelViewModel, Level>();
+        CreateMap<Course, CourseViewModel>();
+        CreateMap<CourseViewModel, Course>();
+        CreateMap<Professor, ProfessorViewModel>();
+        CreateMap<ProfessorViewModel, Professor>();
+        CreateMap<Student, StudentViewModel>();
+        CreateMap<StudentViewModel, Student>();
     }
 }

@@ -296,3 +296,256 @@ Error Number:102,State:1,Class:15 : Syntaxe incorrecte vers 'LIMIT'.
 ClientConnectionId:7eaef23d-4fb6-4a13-a674-e52c027e7a2a
 Error Number:8120,State:1,Class:16 : La colonne 'persons.updatedby' n'est pas valide dans la liste de sélection parce qu'elle n'est pas contenue dans une fonction d'agrégation ou dans la clause GROUP BY.
 ---------------------------------------------------------------------------------------------------------------------
+[Warning] [30/01/2022 03:24:24+00:00] [404 - NotFound] [GET] [SchoolApp.ProfessorController.GetById]: 4
+---------------------------------------------------------------------------------------------------------------------
+[Error] [30/01/2022 03:32:04+00:00] [500 - InternalServerError] [POST] [SchoolApp.LevelController.Level - Add]: Exception => AutoMapper.AutoMapperMappingException: Error mapping types.
+
+Mapping types:
+List`1 -> IList`1
+System.Collections.Generic.List`1[[SchoolApp.Infrastructure.Models.Classes.Level, SchoolApp.Infrastructure, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]] -> System.Collections.Generic.IList`1[[SchoolApp.Client.DtoModel.Models.LevelViewModel, SchoolApp.Client, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]
+ ---> AutoMapper.AutoMapperMappingException: Error mapping types.
+
+Mapping types:
+Level -> LevelViewModel
+SchoolApp.Infrastructure.Models.Classes.Level -> SchoolApp.Client.DtoModel.Models.LevelViewModel
+
+Type Map configuration:
+Level -> LevelViewModel
+SchoolApp.Infrastructure.Models.Classes.Level -> SchoolApp.Client.DtoModel.Models.LevelViewModel
+
+Destination Member:
+students
+
+ ---> AutoMapper.AutoMapperMappingException: Missing type map configuration or unsupported mapping.
+
+Mapping types:
+Student -> UserViewModel
+SchoolApp.Infrastructure.Models.Classes.Student -> SchoolApp.Client.DtoModel.Models.UserViewModel
+   at lambda_method505(Closure , Student , UserViewModel , ResolutionContext )
+   at lambda_method504(Closure , Object , IList`1 , ResolutionContext )
+   --- End of inner exception stack trace ---
+   at lambda_method504(Closure , Object , IList`1 , ResolutionContext )
+   --- End of inner exception stack trace ---
+   at lambda_method504(Closure , Object , IList`1 , ResolutionContext )
+   at SchoolApp.Client.GenericController.GenericController`2.GetByFilter(Filter filter) in C:\Users\Marouane Win10 VM\Documents\DotnetProject.Source\SchoolApp\SchoolApp.Client\GenericController\GenericController.cs:line 139 : Error mapping types.
+
+Mapping types:
+List`1 -> IList`1
+System.Collections.Generic.List`1[[SchoolApp.Infrastructure.Models.Classes.Level, SchoolApp.Infrastructure, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]] -> System.Collections.Generic.IList`1[[SchoolApp.Client.DtoModel.Models.LevelViewModel, SchoolApp.Client, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]
+---------------------------------------------------------------------------------------------------------------------
+[Error] [30/01/2022 03:32:25+00:00] [500 - InternalServerError] [POST] [SchoolApp.LevelController.Level - Add]: Exception => AutoMapper.AutoMapperMappingException: Error mapping types.
+
+Mapping types:
+List`1 -> IList`1
+System.Collections.Generic.List`1[[SchoolApp.Infrastructure.Models.Classes.Level, SchoolApp.Infrastructure, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]] -> System.Collections.Generic.IList`1[[SchoolApp.Client.DtoModel.Models.LevelViewModel, SchoolApp.Client, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]
+ ---> AutoMapper.AutoMapperMappingException: Error mapping types.
+
+Mapping types:
+Level -> LevelViewModel
+SchoolApp.Infrastructure.Models.Classes.Level -> SchoolApp.Client.DtoModel.Models.LevelViewModel
+
+Type Map configuration:
+Level -> LevelViewModel
+SchoolApp.Infrastructure.Models.Classes.Level -> SchoolApp.Client.DtoModel.Models.LevelViewModel
+
+Destination Member:
+students
+
+ ---> AutoMapper.AutoMapperMappingException: Missing type map configuration or unsupported mapping.
+
+Mapping types:
+Student -> UserViewModel
+SchoolApp.Infrastructure.Models.Classes.Student -> SchoolApp.Client.DtoModel.Models.UserViewModel
+   at lambda_method505(Closure , Student , UserViewModel , ResolutionContext )
+   at lambda_method504(Closure , Object , IList`1 , ResolutionContext )
+   --- End of inner exception stack trace ---
+   at lambda_method504(Closure , Object , IList`1 , ResolutionContext )
+   --- End of inner exception stack trace ---
+   at lambda_method504(Closure , Object , IList`1 , ResolutionContext )
+   at SchoolApp.Client.GenericController.GenericController`2.GetByFilter(Filter filter) in C:\Users\Marouane Win10 VM\Documents\DotnetProject.Source\SchoolApp\SchoolApp.Client\GenericController\GenericController.cs:line 139 : Error mapping types.
+
+Mapping types:
+List`1 -> IList`1
+System.Collections.Generic.List`1[[SchoolApp.Infrastructure.Models.Classes.Level, SchoolApp.Infrastructure, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]] -> System.Collections.Generic.IList`1[[SchoolApp.Client.DtoModel.Models.LevelViewModel, SchoolApp.Client, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]
+---------------------------------------------------------------------------------------------------------------------
+[Error] [30/01/2022 03:35:04+00:00] [500 - InternalServerError] [POST] [SchoolApp.StudentController.Student - Add]: Exception => System.InvalidOperationException: An error was generated for warning 'Microsoft.EntityFrameworkCore.Query.InvalidIncludePathError': Unable to find navigation 'course' specified in string based include path 'course'. This exception can be suppressed or logged by passing event ID 'CoreEventId.InvalidIncludePathError' to the 'ConfigureWarnings' method in 'DbContext.OnConfiguring' or 'AddDbContext'.
+   at Microsoft.EntityFrameworkCore.Diagnostics.EventDefinition`2.Log[TLoggerCategory](IDiagnosticsLogger`1 logger, TParam1 arg1, TParam2 arg2)
+   at Microsoft.EntityFrameworkCore.Diagnostics.CoreLoggerExtensions.InvalidIncludePathError(IDiagnosticsLogger`1 diagnostics, String navigationChain, String navigationName)
+   at Microsoft.EntityFrameworkCore.Query.Internal.NavigationExpandingExpressionVisitor.ProcessInclude(NavigationExpansionExpression source, Expression expression, Boolean thenInclude, Boolean setLoaded)
+   at Microsoft.EntityFrameworkCore.Query.Internal.NavigationExpandingExpressionVisitor.VisitMethodCall(MethodCallExpression methodCallExpression)
+   at Microsoft.EntityFrameworkCore.Query.Internal.NavigationExpandingExpressionVisitor.VisitMethodCall(MethodCallExpression methodCallExpression)
+   at Microsoft.EntityFrameworkCore.Query.Internal.NavigationExpandingExpressionVisitor.VisitMethodCall(MethodCallExpression methodCallExpression)
+   at Microsoft.EntityFrameworkCore.Query.Internal.NavigationExpandingExpressionVisitor.VisitMethodCall(MethodCallExpression methodCallExpression)
+   at Microsoft.EntityFrameworkCore.Query.Internal.NavigationExpandingExpressionVisitor.Expand(Expression query)
+   at Microsoft.EntityFrameworkCore.Query.QueryTranslationPreprocessor.Process(Expression query)
+   at Microsoft.EntityFrameworkCore.Query.QueryCompilationContext.CreateQueryExecutor[TResult](Expression query)
+   at Microsoft.EntityFrameworkCore.Storage.Database.CompileQuery[TResult](Expression query, Boolean async)
+   at Microsoft.EntityFrameworkCore.Query.Internal.QueryCompiler.CompileQueryCore[TResult](IDatabase database, Expression query, IModel model, Boolean async)
+   at Microsoft.EntityFrameworkCore.Query.Internal.QueryCompiler.<>c__DisplayClass12_0`1.<ExecuteAsync>b__0()
+   at Microsoft.EntityFrameworkCore.Query.Internal.CompiledQueryCache.GetOrAddQuery[TResult](Object cacheKey, Func`1 compiler)
+   at Microsoft.EntityFrameworkCore.Query.Internal.QueryCompiler.ExecuteAsync[TResult](Expression query, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Query.Internal.EntityQueryProvider.ExecuteAsync[TResult](Expression expression, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Query.Internal.EntityQueryable`1.GetAsyncEnumerator(CancellationToken cancellationToken)
+   at System.Runtime.CompilerServices.ConfiguredCancelableAsyncEnumerable`1.GetAsyncEnumerator()
+   at Microsoft.EntityFrameworkCore.EntityFrameworkQueryableExtensions.ToListAsync[TSource](IQueryable`1 source, CancellationToken cancellationToken)
+   at SchoolApp.Domain.GenericRepository.Classe.GenericRepository`1.GetMuliple(Expression`1 predicate, Func`2 orderBy, String includes, Boolean disableTracking, Int32 take, Int32 offset) in C:\Users\Marouane Win10 VM\Documents\DotnetProject.Source\SchoolApp\SchoolApp.Domain\GenericRepository\Classe\GenericRepository.cs:line 96
+   at SchoolApp.Business.Services.Queries.Classes.GenericQueryService`1.GetTEntitys(Expression`1 predicate, Func`2 orderBy, String includes, Boolean disableTracking, Int32 take, Int32 offset) in C:\Users\Marouane Win10 VM\Documents\DotnetProject.Source\SchoolApp\SchoolApp.Business\Services\Queries\Classes\GenericQueryService.cs:line 33
+   at SchoolApp.Client.GenericController.GenericController`2.GetByFilter(Filter filter) in C:\Users\Marouane Win10 VM\Documents\DotnetProject.Source\SchoolApp\SchoolApp.Client\GenericController\GenericController.cs:line 117 : An error was generated for warning 'Microsoft.EntityFrameworkCore.Query.InvalidIncludePathError': Unable to find navigation 'course' specified in string based include path 'course'. This exception can be suppressed or logged by passing event ID 'CoreEventId.InvalidIncludePathError' to the 'ConfigureWarnings' method in 'DbContext.OnConfiguring' or 'AddDbContext'.
+---------------------------------------------------------------------------------------------------------------------
+[Error] [30/01/2022 03:35:11+00:00] [500 - InternalServerError] [POST] [SchoolApp.StudentController.Student - Add]: Exception => System.InvalidOperationException: An error was generated for warning 'Microsoft.EntityFrameworkCore.Query.InvalidIncludePathError': Unable to find navigation 'course' specified in string based include path 'course'. This exception can be suppressed or logged by passing event ID 'CoreEventId.InvalidIncludePathError' to the 'ConfigureWarnings' method in 'DbContext.OnConfiguring' or 'AddDbContext'.
+   at Microsoft.EntityFrameworkCore.Diagnostics.EventDefinition`2.Log[TLoggerCategory](IDiagnosticsLogger`1 logger, TParam1 arg1, TParam2 arg2)
+   at Microsoft.EntityFrameworkCore.Diagnostics.CoreLoggerExtensions.InvalidIncludePathError(IDiagnosticsLogger`1 diagnostics, String navigationChain, String navigationName)
+   at Microsoft.EntityFrameworkCore.Query.Internal.NavigationExpandingExpressionVisitor.ProcessInclude(NavigationExpansionExpression source, Expression expression, Boolean thenInclude, Boolean setLoaded)
+   at Microsoft.EntityFrameworkCore.Query.Internal.NavigationExpandingExpressionVisitor.VisitMethodCall(MethodCallExpression methodCallExpression)
+   at Microsoft.EntityFrameworkCore.Query.Internal.NavigationExpandingExpressionVisitor.VisitMethodCall(MethodCallExpression methodCallExpression)
+   at Microsoft.EntityFrameworkCore.Query.Internal.NavigationExpandingExpressionVisitor.VisitMethodCall(MethodCallExpression methodCallExpression)
+   at Microsoft.EntityFrameworkCore.Query.Internal.NavigationExpandingExpressionVisitor.Expand(Expression query)
+   at Microsoft.EntityFrameworkCore.Query.QueryTranslationPreprocessor.Process(Expression query)
+   at Microsoft.EntityFrameworkCore.Query.QueryCompilationContext.CreateQueryExecutor[TResult](Expression query)
+   at Microsoft.EntityFrameworkCore.Storage.Database.CompileQuery[TResult](Expression query, Boolean async)
+   at Microsoft.EntityFrameworkCore.Query.Internal.QueryCompiler.CompileQueryCore[TResult](IDatabase database, Expression query, IModel model, Boolean async)
+   at Microsoft.EntityFrameworkCore.Query.Internal.QueryCompiler.<>c__DisplayClass12_0`1.<ExecuteAsync>b__0()
+   at Microsoft.EntityFrameworkCore.Query.Internal.CompiledQueryCache.GetOrAddQuery[TResult](Object cacheKey, Func`1 compiler)
+   at Microsoft.EntityFrameworkCore.Query.Internal.QueryCompiler.ExecuteAsync[TResult](Expression query, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Query.Internal.EntityQueryProvider.ExecuteAsync[TResult](Expression expression, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Query.Internal.EntityQueryable`1.GetAsyncEnumerator(CancellationToken cancellationToken)
+   at System.Runtime.CompilerServices.ConfiguredCancelableAsyncEnumerable`1.GetAsyncEnumerator()
+   at Microsoft.EntityFrameworkCore.EntityFrameworkQueryableExtensions.ToListAsync[TSource](IQueryable`1 source, CancellationToken cancellationToken)
+   at SchoolApp.Domain.GenericRepository.Classe.GenericRepository`1.GetMuliple(Expression`1 predicate, Func`2 orderBy, String includes, Boolean disableTracking, Int32 take, Int32 offset) in C:\Users\Marouane Win10 VM\Documents\DotnetProject.Source\SchoolApp\SchoolApp.Domain\GenericRepository\Classe\GenericRepository.cs:line 96
+   at SchoolApp.Business.Services.Queries.Classes.GenericQueryService`1.GetTEntitys(Expression`1 predicate, Func`2 orderBy, String includes, Boolean disableTracking, Int32 take, Int32 offset) in C:\Users\Marouane Win10 VM\Documents\DotnetProject.Source\SchoolApp\SchoolApp.Business\Services\Queries\Classes\GenericQueryService.cs:line 33
+   at SchoolApp.Client.GenericController.GenericController`2.GetByFilter(Filter filter) in C:\Users\Marouane Win10 VM\Documents\DotnetProject.Source\SchoolApp\SchoolApp.Client\GenericController\GenericController.cs:line 117 : An error was generated for warning 'Microsoft.EntityFrameworkCore.Query.InvalidIncludePathError': Unable to find navigation 'course' specified in string based include path 'course'. This exception can be suppressed or logged by passing event ID 'CoreEventId.InvalidIncludePathError' to the 'ConfigureWarnings' method in 'DbContext.OnConfiguring' or 'AddDbContext'.
+---------------------------------------------------------------------------------------------------------------------
+[Error] [30/01/2022 03:36:06+00:00] [500 - InternalServerError] [POST] [SchoolApp.LevelController.Level - Add]: Exception => AutoMapper.AutoMapperMappingException: Error mapping types.
+
+Mapping types:
+List`1 -> IList`1
+System.Collections.Generic.List`1[[SchoolApp.Infrastructure.Models.Classes.Level, SchoolApp.Infrastructure, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]] -> System.Collections.Generic.IList`1[[SchoolApp.Client.DtoModel.Models.LevelViewModel, SchoolApp.Client, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]
+ ---> AutoMapper.AutoMapperMappingException: Error mapping types.
+
+Mapping types:
+Level -> LevelViewModel
+SchoolApp.Infrastructure.Models.Classes.Level -> SchoolApp.Client.DtoModel.Models.LevelViewModel
+
+Type Map configuration:
+Level -> LevelViewModel
+SchoolApp.Infrastructure.Models.Classes.Level -> SchoolApp.Client.DtoModel.Models.LevelViewModel
+
+Destination Member:
+students
+
+ ---> AutoMapper.AutoMapperMappingException: Missing type map configuration or unsupported mapping.
+
+Mapping types:
+Student -> UserViewModel
+SchoolApp.Infrastructure.Models.Classes.Student -> SchoolApp.Client.DtoModel.Models.UserViewModel
+   at lambda_method505(Closure , Student , UserViewModel , ResolutionContext )
+   at lambda_method504(Closure , Object , IList`1 , ResolutionContext )
+   --- End of inner exception stack trace ---
+   at lambda_method504(Closure , Object , IList`1 , ResolutionContext )
+   --- End of inner exception stack trace ---
+   at lambda_method504(Closure , Object , IList`1 , ResolutionContext )
+   at SchoolApp.Client.GenericController.GenericController`2.GetByFilter(Filter filter) in C:\Users\Marouane Win10 VM\Documents\DotnetProject.Source\SchoolApp\SchoolApp.Client\GenericController\GenericController.cs:line 139 : Error mapping types.
+
+Mapping types:
+List`1 -> IList`1
+System.Collections.Generic.List`1[[SchoolApp.Infrastructure.Models.Classes.Level, SchoolApp.Infrastructure, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]] -> System.Collections.Generic.IList`1[[SchoolApp.Client.DtoModel.Models.LevelViewModel, SchoolApp.Client, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]
+---------------------------------------------------------------------------------------------------------------------
+[Error] [30/01/2022 03:36:55+00:00] [500 - InternalServerError] [POST] [SchoolApp.LevelController.Level - Add]: Exception => AutoMapper.AutoMapperMappingException: Error mapping types.
+
+Mapping types:
+List`1 -> IList`1
+System.Collections.Generic.List`1[[SchoolApp.Infrastructure.Models.Classes.Level, SchoolApp.Infrastructure, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]] -> System.Collections.Generic.IList`1[[SchoolApp.Client.DtoModel.Models.LevelViewModel, SchoolApp.Client, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]
+ ---> AutoMapper.AutoMapperMappingException: Error mapping types.
+
+Mapping types:
+Level -> LevelViewModel
+SchoolApp.Infrastructure.Models.Classes.Level -> SchoolApp.Client.DtoModel.Models.LevelViewModel
+
+Type Map configuration:
+Level -> LevelViewModel
+SchoolApp.Infrastructure.Models.Classes.Level -> SchoolApp.Client.DtoModel.Models.LevelViewModel
+
+Destination Member:
+students
+
+ ---> AutoMapper.AutoMapperMappingException: Missing type map configuration or unsupported mapping.
+
+Mapping types:
+Student -> UserViewModel
+SchoolApp.Infrastructure.Models.Classes.Student -> SchoolApp.Client.DtoModel.Models.UserViewModel
+   at lambda_method505(Closure , Student , UserViewModel , ResolutionContext )
+   at lambda_method504(Closure , Object , IList`1 , ResolutionContext )
+   --- End of inner exception stack trace ---
+   at lambda_method504(Closure , Object , IList`1 , ResolutionContext )
+   --- End of inner exception stack trace ---
+   at lambda_method504(Closure , Object , IList`1 , ResolutionContext )
+   at SchoolApp.Client.GenericController.GenericController`2.GetByFilter(Filter filter) in C:\Users\Marouane Win10 VM\Documents\DotnetProject.Source\SchoolApp\SchoolApp.Client\GenericController\GenericController.cs:line 139 : Error mapping types.
+
+Mapping types:
+List`1 -> IList`1
+System.Collections.Generic.List`1[[SchoolApp.Infrastructure.Models.Classes.Level, SchoolApp.Infrastructure, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]] -> System.Collections.Generic.IList`1[[SchoolApp.Client.DtoModel.Models.LevelViewModel, SchoolApp.Client, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]
+---------------------------------------------------------------------------------------------------------------------
+[Error] [30/01/2022 03:46:59+00:00] [500 - InternalServerError] [POST] [SchoolApp.LevelController.Level - Add]: Exception => AutoMapper.AutoMapperMappingException: Error mapping types.
+
+Mapping types:
+List`1 -> IList`1
+System.Collections.Generic.List`1[[SchoolApp.Infrastructure.Models.Classes.Level, SchoolApp.Infrastructure, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]] -> System.Collections.Generic.IList`1[[SchoolApp.Client.DtoModel.Models.LevelViewModel, SchoolApp.Client, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]
+ ---> AutoMapper.AutoMapperMappingException: Error mapping types.
+
+Mapping types:
+Level -> LevelViewModel
+SchoolApp.Infrastructure.Models.Classes.Level -> SchoolApp.Client.DtoModel.Models.LevelViewModel
+
+Type Map configuration:
+Level -> LevelViewModel
+SchoolApp.Infrastructure.Models.Classes.Level -> SchoolApp.Client.DtoModel.Models.LevelViewModel
+
+Destination Member:
+students
+
+ ---> AutoMapper.AutoMapperMappingException: Error mapping types.
+
+Mapping types:
+HashSet`1 -> ICollection`1
+System.Collections.Generic.HashSet`1[[SchoolApp.Infrastructure.Models.Classes.Student, SchoolApp.Infrastructure, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]] -> System.Collections.Generic.ICollection`1[[SchoolApp.Client.DtoModel.Models.StudentViewModel, SchoolApp.Client, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]
+
+Destination Member:
+students
+
+ ---> AutoMapper.AutoMapperMappingException: Error mapping types.
+
+Mapping types:
+Student -> StudentViewModel
+SchoolApp.Infrastructure.Models.Classes.Student -> SchoolApp.Client.DtoModel.Models.StudentViewModel
+
+Type Map configuration:
+Student -> StudentViewModel
+SchoolApp.Infrastructure.Models.Classes.Student -> SchoolApp.Client.DtoModel.Models.StudentViewModel
+
+Destination Member:
+person
+
+ ---> System.InvalidOperationException: An error was generated for warning 'Microsoft.EntityFrameworkCore.Infrastructure.DetachedLazyLoadingWarning': An attempt was made to lazy-load navigation 'person' on a detached entity of type 'StudentProxy'. Lazy loading is not supported for detached entities or entities that are loaded with 'AsNoTracking'. This exception can be suppressed or logged by passing event ID 'CoreEventId.DetachedLazyLoadingWarning' to the 'ConfigureWarnings' method in 'DbContext.OnConfiguring' or 'AddDbContext'.
+   at Microsoft.EntityFrameworkCore.Diagnostics.EventDefinition`2.Log[TLoggerCategory](IDiagnosticsLogger`1 logger, TParam1 arg1, TParam2 arg2)
+   at Microsoft.EntityFrameworkCore.Diagnostics.CoreLoggerExtensions.DetachedLazyLoadingWarning(IDiagnosticsLogger`1 diagnostics, DbContext context, Object entityType, String navigationName)
+   at Microsoft.EntityFrameworkCore.Infrastructure.Internal.LazyLoader.ShouldLoad(Object entity, String navigationName, NavigationEntry& navigationEntry)
+   at Microsoft.EntityFrameworkCore.Infrastructure.Internal.LazyLoader.Load(Object entity, String navigationName)
+   at Microsoft.EntityFrameworkCore.Proxies.Internal.LazyLoadingInterceptor.Intercept(IInvocation invocation)
+   at Castle.DynamicProxy.AbstractInvocation.Proceed()
+   at Castle.Proxies.StudentProxy.get_person()
+   at lambda_method160(Closure , ICollection`1 , ICollection`1 , ResolutionContext )
+   --- End of inner exception stack trace ---
+   at lambda_method160(Closure , ICollection`1 , ICollection`1 , ResolutionContext )
+   --- End of inner exception stack trace ---
+   at lambda_method160(Closure , ICollection`1 , ICollection`1 , ResolutionContext )
+   at lambda_method159(Closure , Object , IList`1 , ResolutionContext )
+   --- End of inner exception stack trace ---
+   at lambda_method159(Closure , Object , IList`1 , ResolutionContext )
+   --- End of inner exception stack trace ---
+   at lambda_method159(Closure , Object , IList`1 , ResolutionContext )
+   at SchoolApp.Client.GenericController.GenericController`2.GetByFilter(Filter filter) in C:\Users\Marouane Win10 VM\Documents\DotnetProject.Source\SchoolApp\SchoolApp.Client\GenericController\GenericController.cs:line 139 : Error mapping types.
+
+Mapping types:
+List`1 -> IList`1
+System.Collections.Generic.List`1[[SchoolApp.Infrastructure.Models.Classes.Level, SchoolApp.Infrastructure, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]] -> System.Collections.Generic.IList`1[[SchoolApp.Client.DtoModel.Models.LevelViewModel, SchoolApp.Client, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]
+---------------------------------------------------------------------------------------------------------------------
