@@ -7,6 +7,8 @@ using SchoolApp.Business.Services.Queries.Classes;
 using SchoolApp.Business.Services.Queries.Interfaces;
 using SchoolApp.Business.Services.SendEmails.Classe;
 using SchoolApp.Business.Services.SendEmails.Interface;
+using SchoolApp.Business.Services.UploadPhoto.Classe;
+using SchoolApp.Business.Services.UploadPhoto.Interface;
 using SchoolApp.Client.RealTime.Hubs.Classe;
 using SchoolApp.Client.RealTime.Hubs.Interface;
 using SchoolApp.Infrastructure.DatabaseContext;
@@ -37,6 +39,7 @@ public static class AddServices
         self.AddTransient<IGenericCommandService<Student>, GenericCommandService<Student>>();
 
         self.AddTransient<IAuthenticationService, AuthenticationService>();
+        self.AddTransient<IUploadPhotoService, UploadPhotoService>();
 
         self.AddTransient<ISendMailService, SendMailService>();
         self.AddTransient<ISmtpClient, SmtpClient>();

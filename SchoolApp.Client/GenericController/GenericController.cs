@@ -66,7 +66,7 @@ public class GenericController<TEntity, TEntityViewModel> : ControllerBase
         }
         catch (Exception ex)
         {
-            _logger.LoggingMessageError("SchoolApp", (int)HttpStatusCode.InternalServerError, HttpStatusCode.InternalServerError.ToString(), HttpContext.Request.Method, ControllerContext.RouteData.Values["controller"].ToString(), ControllerContext.RouteData.Values["controller"].ToString() + " - Add", ex, _currentEnvironment.ContentRootPath);
+            _logger.LoggingMessageError("SchoolApp", (int)HttpStatusCode.InternalServerError, HttpStatusCode.InternalServerError.ToString(), HttpContext.Request.Method, ControllerContext.RouteData.Values["controller"].ToString(), ControllerContext.RouteData.Values["controller"].ToString() + " - Get()", ex, _currentEnvironment.ContentRootPath);
             return StatusCode(500, new
             {
                 Message = "Get failed !"
@@ -95,7 +95,7 @@ public class GenericController<TEntity, TEntityViewModel> : ControllerBase
         }
         catch (Exception ex)
         {
-            _logger.LoggingMessageError("SchoolApp", (int)HttpStatusCode.InternalServerError, HttpStatusCode.InternalServerError.ToString(), HttpContext.Request.Method, ControllerContext.RouteData.Values["controller"].ToString(), ControllerContext.RouteData.Values["controller"].ToString() + " - Add", ex, _currentEnvironment.ContentRootPath);
+            _logger.LoggingMessageError("SchoolApp", (int)HttpStatusCode.InternalServerError, HttpStatusCode.InternalServerError.ToString(), HttpContext.Request.Method, ControllerContext.RouteData.Values["controller"].ToString(), ControllerContext.RouteData.Values["controller"].ToString() + " - Get(filter)", ex, _currentEnvironment.ContentRootPath);
             return StatusCode(500, new
             {
                 Message = "Get failed !"
@@ -140,7 +140,7 @@ public class GenericController<TEntity, TEntityViewModel> : ControllerBase
         }
         catch (Exception ex)
         {
-            _logger.LoggingMessageError("SchoolApp", (int)HttpStatusCode.InternalServerError, HttpStatusCode.InternalServerError.ToString(), HttpContext.Request.Method, ControllerContext.RouteData.Values["controller"].ToString(), ControllerContext.RouteData.Values["controller"].ToString() + " - Add", ex, _currentEnvironment.ContentRootPath);
+            _logger.LoggingMessageError("SchoolApp", (int)HttpStatusCode.InternalServerError, HttpStatusCode.InternalServerError.ToString(), HttpContext.Request.Method, ControllerContext.RouteData.Values["controller"].ToString(), ControllerContext.RouteData.Values["controller"].ToString() + " - GetByFilter(filter)", ex, _currentEnvironment.ContentRootPath);
             return StatusCode(500, new
             {
                 Message = "Get failed !"
@@ -167,7 +167,7 @@ public class GenericController<TEntity, TEntityViewModel> : ControllerBase
         }
         catch (Exception ex)
         {
-            _logger.LoggingMessageError("SchoolApp", (int)HttpStatusCode.InternalServerError, HttpStatusCode.InternalServerError.ToString(), HttpContext.Request.Method, ControllerContext.RouteData.Values["controller"].ToString(), ControllerContext.RouteData.Values["controller"].ToString() + " - Add", ex, _currentEnvironment.ContentRootPath);
+            _logger.LoggingMessageError("SchoolApp", (int)HttpStatusCode.InternalServerError, HttpStatusCode.InternalServerError.ToString(), HttpContext.Request.Method, ControllerContext.RouteData.Values["controller"].ToString(), ControllerContext.RouteData.Values["controller"].ToString() + " - Get(id)", ex, _currentEnvironment.ContentRootPath);
             return StatusCode(500, new
             {
                 Message = "Get failed !"
@@ -210,7 +210,7 @@ public class GenericController<TEntity, TEntityViewModel> : ControllerBase
         }
         catch (Exception ex)
         {
-            _logger.LoggingMessageError("SchoolApp", (int)HttpStatusCode.InternalServerError, HttpStatusCode.InternalServerError.ToString(), HttpContext.Request.Method, ControllerContext.RouteData.Values["controller"].ToString(), ControllerContext.RouteData.Values["controller"].ToString() + " - Add", ex, _currentEnvironment.ContentRootPath);
+            _logger.LoggingMessageError("SchoolApp", (int)HttpStatusCode.InternalServerError, HttpStatusCode.InternalServerError.ToString(), HttpContext.Request.Method, ControllerContext.RouteData.Values["controller"].ToString(), ControllerContext.RouteData.Values["controller"].ToString() + " - GetFirstByFilter(filter)", ex, _currentEnvironment.ContentRootPath);
             return StatusCode(500, new
             {
                 Message = "Get failed !"
@@ -256,7 +256,7 @@ public class GenericController<TEntity, TEntityViewModel> : ControllerBase
         }
         catch (Exception ex)
         {
-            _logger.LoggingMessageError("SchoolApp", (int)HttpStatusCode.InternalServerError, HttpStatusCode.InternalServerError.ToString(), HttpContext.Request.Method, ControllerContext.RouteData.Values["controller"].ToString(), ControllerContext.RouteData.Values["controller"].ToString() + " - Add", ex, _currentEnvironment.ContentRootPath);
+            _logger.LoggingMessageError("SchoolApp", (int)HttpStatusCode.InternalServerError, HttpStatusCode.InternalServerError.ToString(), HttpContext.Request.Method, ControllerContext.RouteData.Values["controller"].ToString(), ControllerContext.RouteData.Values["controller"].ToString() + " - GetFromSqlRaw(queryParams)", ex, _currentEnvironment.ContentRootPath);
             return StatusCode(500, new
             {
                 Message = "Get failed !"
