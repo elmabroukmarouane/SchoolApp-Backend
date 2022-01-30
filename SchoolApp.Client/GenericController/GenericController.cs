@@ -1,4 +1,5 @@
-﻿using AutoMapper;
+﻿using System.Diagnostics;
+using AutoMapper;
 using SchoolApp.Business.Services.Commands.Interfaces;
 using SchoolApp.Business.Services.Queries.Interfaces;
 using SchoolApp.Infrastructure.Models.Classes;
@@ -50,124 +51,217 @@ public class GenericController<TEntity, TEntityViewModel> : ControllerBase
     [HttpGet]
     public virtual async Task<IActionResult> Get()
     {
-        var list = await _genericQueryService.GetAllTEntitys();
-        if (list == null)
+        try
         {
-            return NotFound(new
+            var list = await _genericQueryService.GetAllTEntitys();
+            if (list == null)
             {
-                Message = "List not found !",
-                StatusCode = (int)HttpStatusCode.NotFound + " - " + HttpStatusCode.NotFound.ToString()
+                return NotFound(new
+                {
+                    Message = "List not found !",
+                    StatusCode = (int)HttpStatusCode.NotFound + " - " + HttpStatusCode.NotFound.ToString()
+                });
+            }
+            return Ok(_mapper.Map<IList<TEntityViewModel>>(list));
+        }
+        catch (Exception ex)
+        {
+            _logger.LoggingMessageError("SchoolApp", (int)HttpStatusCode.InternalServerError, HttpStatusCode.InternalServerError.ToString(), HttpContext.Request.Method, ControllerContext.RouteData.Values["controller"].ToString(), ControllerContext.RouteData.Values["controller"].ToString() + " - Add", ex, _currentEnvironment.ContentRootPath);
+            return StatusCode(500, new
+            {
+                Message = "Get failed !"
             });
         }
-        return Ok(_mapper.Map<IList<TEntityViewModel>>(list));
     }
 
     [Route("GetAll")]
     [HttpPost]
     public virtual async Task<IActionResult> Get(Filter filter)
     {
-        var list = await _genericQueryService.GetTEntitys(orderBy: q => q.OrderByDescending(l => l.id),
-            disableTracking: filter.disableTracking, take: filter.take,
-            offset: filter.offset, includes: filter.includes);
-        if (list == null)
+        try
         {
-            return NotFound(new
+            var list = await _genericQueryService.GetTEntitys(orderBy: q => q.OrderByDescending(l => l.id),
+                disableTracking: filter.disableTracking, take: filter.take,
+                offset: filter.offset, includes: filter.includes);
+            if (list == null)
             {
-                Message = "List not found !",
-                StatusCode = (int)HttpStatusCode.NotFound + " - " + HttpStatusCode.NotFound.ToString()
+                return NotFound(new
+                {
+                    Message = "List not found !",
+                    StatusCode = (int)HttpStatusCode.NotFound + " - " + HttpStatusCode.NotFound.ToString()
+                });
+            }
+            return Ok(_mapper.Map<IList<TEntityViewModel>>(list));
+        }
+        catch (Exception ex)
+        {
+            _logger.LoggingMessageError("SchoolApp", (int)HttpStatusCode.InternalServerError, HttpStatusCode.InternalServerError.ToString(), HttpContext.Request.Method, ControllerContext.RouteData.Values["controller"].ToString(), ControllerContext.RouteData.Values["controller"].ToString() + " - Add", ex, _currentEnvironment.ContentRootPath);
+            return StatusCode(500, new
+            {
+                Message = "Get failed !"
             });
         }
-        return Ok(_mapper.Map<IList<TEntityViewModel>>(list));
     }
 
     [Route("GetByFilter")]
     [HttpPost]
     public virtual async Task<IActionResult> GetByFilter(Filter filter)
     {
-        var filterTrimedLowered = filter.value.Trim().ToLower();
-        bool isParsable = int.TryParse(filterTrimedLowered, out int filteredInt);
-        IList<TEntity> list;
-        if (isParsable)
+        try
         {
-            list = await _genericQueryService.GetTEntitys(predicate: q => q.id == filteredInt,
-                orderBy: q => q.OrderByDescending(o => o.id),
-                disableTracking: filter.disableTracking, take: filter.take, offset: filter.offset, includes: filter.includes);
-        }
-        else
-        {
-            list = await _genericQueryService.GetTEntitys(
-                predicate: q => q.createdby.Contains(filterTrimedLowered) ||
-                q.updatedby.Contains(filterTrimedLowered) ||
-                q.createdate.ToString().Contains(filterTrimedLowered) ||
-                q.updatedate.ToString().Contains(filterTrimedLowered),
-                orderBy: q => q.OrderByDescending(c => c.id),
-                disableTracking: filter.disableTracking, take: filter.take, offset: filter.offset, includes: filter.includes);
-        }
-        if (list == null)
-        {
-            return NotFound(new
+            var filterTrimedLowered = filter.value.Trim().ToLower();
+            bool isParsable = int.TryParse(filterTrimedLowered, out int filteredInt);
+            IList<TEntity> list;
+            if (isParsable)
             {
-                Message = "List not found !",
-                StatusCode = (int)HttpStatusCode.NotFound + " - " + HttpStatusCode.NotFound.ToString()
+                list = await _genericQueryService.GetTEntitys(predicate: q => q.id == filteredInt,
+                    orderBy: q => q.OrderByDescending(o => o.id),
+                    disableTracking: filter.disableTracking, take: filter.take, offset: filter.offset, includes: filter.includes);
+            }
+            else
+            {
+                list = await _genericQueryService.GetTEntitys(
+                    predicate: q => q.createdby.Contains(filterTrimedLowered) ||
+                    q.updatedby.Contains(filterTrimedLowered) ||
+                    q.createdate.ToString().Contains(filterTrimedLowered) ||
+                    q.updatedate.ToString().Contains(filterTrimedLowered),
+                    orderBy: q => q.OrderByDescending(c => c.id),
+                    disableTracking: filter.disableTracking, take: filter.take, offset: filter.offset, includes: filter.includes);
+            }
+            if (list == null)
+            {
+                return NotFound(new
+                {
+                    Message = "List not found !",
+                    StatusCode = (int)HttpStatusCode.NotFound + " - " + HttpStatusCode.NotFound.ToString()
+                });
+            }
+            return Ok(_mapper.Map<IList<TEntityViewModel>>(list));
+        }
+        catch (Exception ex)
+        {
+            _logger.LoggingMessageError("SchoolApp", (int)HttpStatusCode.InternalServerError, HttpStatusCode.InternalServerError.ToString(), HttpContext.Request.Method, ControllerContext.RouteData.Values["controller"].ToString(), ControllerContext.RouteData.Values["controller"].ToString() + " - Add", ex, _currentEnvironment.ContentRootPath);
+            return StatusCode(500, new
+            {
+                Message = "Get failed !"
             });
         }
-        return Ok(_mapper.Map<IList<TEntityViewModel>>(list));
     }
 
     [HttpGet("{id}")]
     public virtual async Task<IActionResult> Get(int id)
     {
-        var row = await _genericQueryService.GetTEntityById(id);
-        if (row == null)
+        try
         {
-            _logger.LoggingMessageWarning("SchoolApp", (int)HttpStatusCode.NotFound, HttpStatusCode.NotFound.ToString(), HttpContext.Request.Method, ControllerContext.RouteData.Values["controller"].ToString(), ControllerContext.RouteData.Values["action"].ToString() + "ById", $"{id}", _currentEnvironment.ContentRootPath);
-            return NotFound(new
+            var row = await _genericQueryService.GetTEntityById(id);
+            if (row == null)
             {
-                Message = "Item not found !",
-                StatusCode = (int)HttpStatusCode.NotFound + " - " + HttpStatusCode.NotFound.ToString()
+                _logger.LoggingMessageWarning("SchoolApp", (int)HttpStatusCode.NotFound, HttpStatusCode.NotFound.ToString(), HttpContext.Request.Method, ControllerContext.RouteData.Values["controller"].ToString(), ControllerContext.RouteData.Values["action"].ToString() + "ById", $"{id}", _currentEnvironment.ContentRootPath);
+                return NotFound(new
+                {
+                    Message = "Item not found !",
+                    StatusCode = (int)HttpStatusCode.NotFound + " - " + HttpStatusCode.NotFound.ToString()
+                });
+            }
+            return Ok(_mapper.Map<TEntityViewModel>(row));
+        }
+        catch (Exception ex)
+        {
+            _logger.LoggingMessageError("SchoolApp", (int)HttpStatusCode.InternalServerError, HttpStatusCode.InternalServerError.ToString(), HttpContext.Request.Method, ControllerContext.RouteData.Values["controller"].ToString(), ControllerContext.RouteData.Values["controller"].ToString() + " - Add", ex, _currentEnvironment.ContentRootPath);
+            return StatusCode(500, new
+            {
+                Message = "Get failed !"
             });
         }
-        return Ok(_mapper.Map<TEntityViewModel>(row));
     }
 
     [Route("GetFirstByFilter")]
     [HttpPost]
     public virtual async Task<IActionResult> GetFirstByFilter(Filter filter)
     {
-        var filterTrimedLowered = filter.value.Trim().ToLower();
-        bool isParsable = int.TryParse(filterTrimedLowered, out int filteredInt);
-        TEntity row;
-        if (isParsable)
+        try
         {
-            row = await _genericQueryService.GetFirstOrDefaultTEntity(predicate: q => q.id == filteredInt,
-            disableTracking: filter.disableTracking, includes: filter.includes);
-        }
-        else
-        {
-            row = await _genericQueryService.GetFirstOrDefaultTEntity(
-                predicate: q => q.createdby.Contains(filterTrimedLowered) ||
-                q.updatedby.Contains(filterTrimedLowered) ||
-                q.createdate.ToString().Contains(filterTrimedLowered) ||
-                q.updatedate.ToString().Contains(filterTrimedLowered),
-                disableTracking: filter.disableTracking, includes: filter.includes);
-        }
-        if (row == null)
-        {
-            return NotFound(new
+            var filterTrimedLowered = filter.value.Trim().ToLower();
+            bool isParsable = int.TryParse(filterTrimedLowered, out int filteredInt);
+            TEntity row;
+            if (isParsable)
             {
-                Message = "Item not found !",
-                StatusCode = (int)HttpStatusCode.NotFound + " - " + HttpStatusCode.NotFound.ToString()
+                row = await _genericQueryService.GetFirstOrDefaultTEntity(predicate: q => q.id == filteredInt,
+                disableTracking: filter.disableTracking, includes: filter.includes);
+            }
+            else
+            {
+                row = await _genericQueryService.GetFirstOrDefaultTEntity(
+                    predicate: q => q.createdby.Contains(filterTrimedLowered) ||
+                    q.updatedby.Contains(filterTrimedLowered) ||
+                    q.createdate.ToString().Contains(filterTrimedLowered) ||
+                    q.updatedate.ToString().Contains(filterTrimedLowered),
+                    disableTracking: filter.disableTracking, includes: filter.includes);
+            }
+            if (row == null)
+            {
+                return NotFound(new
+                {
+                    Message = "Item not found !",
+                    StatusCode = (int)HttpStatusCode.NotFound + " - " + HttpStatusCode.NotFound.ToString()
+                });
+            }
+            return Ok(_mapper.Map<TEntityViewModel>(row));
+        }
+        catch (Exception ex)
+        {
+            _logger.LoggingMessageError("SchoolApp", (int)HttpStatusCode.InternalServerError, HttpStatusCode.InternalServerError.ToString(), HttpContext.Request.Method, ControllerContext.RouteData.Values["controller"].ToString(), ControllerContext.RouteData.Values["controller"].ToString() + " - Add", ex, _currentEnvironment.ContentRootPath);
+            return StatusCode(500, new
+            {
+                Message = "Get failed !"
             });
         }
-        return Ok(_mapper.Map<TEntityViewModel>(row));
     }
 
     [Route("GetFromSql")]
     [HttpPost]
     public virtual async Task<IActionResult> GetFromSqlRaw(QueryParams queryParams)
     {
-        await Task.Delay(0);
-        return Ok();
+        try
+        {
+            var sql = $"SELECT { queryParams.fields } FROM { queryParams.table }"; // For the moment in .NET 6 (30/01/2022) There are a few limitations to be aware of when using raw SQL queries, so The SQL query must return data for all properties of the entity type Therefore, currently, we are not allowed to specify columns using FromSqlRaw
+            if (!string.IsNullOrEmpty(queryParams.where)) sql += $" WHERE { queryParams.where }";
+            if (!string.IsNullOrEmpty(queryParams.groupby)) sql += $" GROUP BY { queryParams.groupby }";
+            if (!string.IsNullOrEmpty(queryParams.having)) sql += $" HAVING { queryParams.having }";
+            if (!string.IsNullOrEmpty(queryParams.orderby)) sql += $" ORDER BY { queryParams.orderby }";
+            /* {
+                "fields": "*" or "id, firstname, lastname, birthdate, createdate, updatedate, createdby, updatedby"<ALL_FIELDS_EXPLICITLY>,
+                "table": "persons",
+                "where": "",
+                "groupby": "id, firstname, lastname, birthdate, createdate, updatedate, createdby, updatedby",
+                "having": "sum(id) > 1",
+                "orderby": "id desc",
+                "limit": 2,
+                "offset": 2
+                } */ // Request Swagger
+            var list = await _genericQueryService.GetFromSqlRaw(sql);
+            if (!string.IsNullOrEmpty(queryParams.limit.ToString()) && int.TryParse(queryParams.limit.ToString(), out int LimitIsInt) && queryParams.limit > 0)
+                list = list.Skip(queryParams.limit).ToList();
+            if (!string.IsNullOrEmpty(queryParams.offset.ToString()) && int.TryParse(queryParams.offset.ToString(), out int OffsetIsInt) && queryParams.offset > 0)
+                list = list.Take(queryParams.offset).ToList();
+            if (list == null)
+            {
+                return NotFound(new
+                {
+                    Message = "Item not found !",
+                    StatusCode = (int)HttpStatusCode.NotFound + " - " + HttpStatusCode.NotFound.ToString()
+                });
+            }
+            return Ok(list);
+        }
+        catch (Exception ex)
+        {
+            _logger.LoggingMessageError("SchoolApp", (int)HttpStatusCode.InternalServerError, HttpStatusCode.InternalServerError.ToString(), HttpContext.Request.Method, ControllerContext.RouteData.Values["controller"].ToString(), ControllerContext.RouteData.Values["controller"].ToString() + " - Add", ex, _currentEnvironment.ContentRootPath);
+            return StatusCode(500, new
+            {
+                Message = "Get failed !"
+            });
+        }
     }
     #endregion
 
@@ -195,9 +289,7 @@ public class GenericController<TEntity, TEntityViewModel> : ControllerBase
             _logger.LoggingMessageError("SchoolApp", (int)HttpStatusCode.InternalServerError, HttpStatusCode.InternalServerError.ToString(), HttpContext.Request.Method, ControllerContext.RouteData.Values["controller"].ToString(), ControllerContext.RouteData.Values["controller"].ToString() + " - Add", ex, _currentEnvironment.ContentRootPath);
             return StatusCode(500, new
             {
-                Message = "Add failed !",
-                Exception = ex.Message,
-                ex.InnerException
+                Message = "Add failed !"
             });
         }
     }
@@ -223,9 +315,7 @@ public class GenericController<TEntity, TEntityViewModel> : ControllerBase
             _logger.LoggingMessageError("SchoolApp", (int)HttpStatusCode.InternalServerError, HttpStatusCode.InternalServerError.ToString(), HttpContext.Request.Method, ControllerContext.RouteData.Values["controller"].ToString(), ControllerContext.RouteData.Values["controller"].ToString() + " - AddRange", ex, _currentEnvironment.ContentRootPath);
             return StatusCode(500, new
             {
-                Message = "Add range failed !",
-                Exception = ex.Message,
-                ex.InnerException
+                Message = "Add range failed !"
             });
         }
     }
@@ -250,9 +340,7 @@ public class GenericController<TEntity, TEntityViewModel> : ControllerBase
             _logger.LoggingMessageError("SchoolApp", (int)HttpStatusCode.InternalServerError, HttpStatusCode.InternalServerError.ToString(), HttpContext.Request.Method, ControllerContext.RouteData.Values["controller"].ToString(), ControllerContext.RouteData.Values["controller"].ToString() + " - UpdateByState", ex, _currentEnvironment.ContentRootPath);
             return StatusCode(500, new
             {
-                Message = "Update failed !",
-                Exception = ex.Message,
-                ex.InnerException
+                Message = "Update failed !"
             });
         }
     }
@@ -274,9 +362,7 @@ public class GenericController<TEntity, TEntityViewModel> : ControllerBase
             _logger.LoggingMessageError("SchoolApp", (int)HttpStatusCode.InternalServerError, HttpStatusCode.InternalServerError.ToString(), HttpContext.Request.Method, ControllerContext.RouteData.Values["controller"].ToString(), ControllerContext.RouteData.Values["controller"].ToString() + " - Update", ex, _currentEnvironment.ContentRootPath);
             return StatusCode(500, new
             {
-                Message = "Update failed !",
-                Exception = ex.Message,
-                ex.InnerException
+                Message = "Update failed !"
             });
         }
     }
@@ -298,9 +384,7 @@ public class GenericController<TEntity, TEntityViewModel> : ControllerBase
             _logger.LoggingMessageError("SchoolApp", (int)HttpStatusCode.InternalServerError, HttpStatusCode.InternalServerError.ToString(), HttpContext.Request.Method, ControllerContext.RouteData.Values["controller"].ToString(), ControllerContext.RouteData.Values["controller"].ToString() + " - UpdateRange", ex, _currentEnvironment.ContentRootPath);
             return StatusCode(500, new
             {
-                Message = "Update range failed !",
-                Exception = ex.Message,
-                ex.InnerException
+                Message = "Update range failed !"
             });
         }
     }
@@ -323,9 +407,7 @@ public class GenericController<TEntity, TEntityViewModel> : ControllerBase
             _logger.LoggingMessageError("SchoolApp", (int)HttpStatusCode.InternalServerError, HttpStatusCode.InternalServerError.ToString(), HttpContext.Request.Method, ControllerContext.RouteData.Values["controller"].ToString(), ControllerContext.RouteData.Values["controller"].ToString() + " - UpdateRangeByState", ex, _currentEnvironment.ContentRootPath);
             return StatusCode(500, new
             {
-                Message = "Update failed !",
-                Exception = ex.Message,
-                ex.InnerException
+                Message = "Update failed !"
             });
         }
     }
@@ -348,9 +430,7 @@ public class GenericController<TEntity, TEntityViewModel> : ControllerBase
             _logger.LoggingMessageError("SchoolApp", (int)HttpStatusCode.InternalServerError, HttpStatusCode.InternalServerError.ToString(), HttpContext.Request.Method, ControllerContext.RouteData.Values["controller"].ToString(), ControllerContext.RouteData.Values["controller"].ToString() + " - Delete", ex, _currentEnvironment.ContentRootPath);
             return StatusCode(500, new
             {
-                Message = "Delete failed !",
-                Exception = ex.Message,
-                ex.InnerException
+                Message = "Delete failed !"
             });
         }
     }
@@ -371,9 +451,7 @@ public class GenericController<TEntity, TEntityViewModel> : ControllerBase
             _logger.LoggingMessageError("SchoolApp", (int)HttpStatusCode.InternalServerError, HttpStatusCode.InternalServerError.ToString(), HttpContext.Request.Method, ControllerContext.RouteData.Values["controller"].ToString(), ControllerContext.RouteData.Values["controller"].ToString() + " - Delete_HttpPost", ex, _currentEnvironment.ContentRootPath);
             return StatusCode(500, new
             {
-                Message = "Delete failed !",
-                Exception = ex.Message,
-                ex.InnerException
+                Message = "Delete failed !"
             });
         }
     }
@@ -394,9 +472,7 @@ public class GenericController<TEntity, TEntityViewModel> : ControllerBase
             _logger.LoggingMessageError("SchoolApp", (int)HttpStatusCode.InternalServerError, HttpStatusCode.InternalServerError.ToString(), HttpContext.Request.Method, ControllerContext.RouteData.Values["controller"].ToString(), ControllerContext.RouteData.Values["controller"].ToString() + " - DeleteRange", ex, _currentEnvironment.ContentRootPath);
             return StatusCode(500, new
             {
-                Message = "Delete Range failed !",
-                Exception = ex.Message,
-                ex.InnerException
+                Message = "Delete Range failed !"
             });
         }
     }

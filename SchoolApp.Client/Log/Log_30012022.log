@@ -1,0 +1,298 @@
+[Error] [30/01/2022 01:19:39+00:00] [500 - InternalServerError] [POST] [SchoolApp.PersonController.Person - Add]: Exception => Microsoft.Data.SqlClient.SqlException (0x80131904): Procédure stockée 'firstname' introuvable.
+   at Microsoft.Data.SqlClient.SqlCommand.<>c.<ExecuteDbDataReaderAsync>b__188_0(Task`1 result)
+   at System.Threading.Tasks.ContinuationResultTaskFromResultTask`2.InnerInvoke()
+   at System.Threading.Tasks.Task.<>c.<.cctor>b__272_0(Object obj)
+   at System.Threading.ExecutionContext.RunInternal(ExecutionContext executionContext, ContextCallback callback, Object state)
+--- End of stack trace from previous location ---
+   at System.Threading.Tasks.Task.ExecuteWithThreadLocal(Task& currentTaskSlot, Thread threadPoolThread)
+--- End of stack trace from previous location ---
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Query.Internal.FromSqlQueryingEnumerable`1.AsyncEnumerator.InitializeReaderAsync(AsyncEnumerator enumerator, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.ExecutionStrategy.<>c__DisplayClass33_0`2.<<ExecuteAsync>b__0>d.MoveNext()
+--- End of stack trace from previous location ---
+   at Microsoft.EntityFrameworkCore.Storage.ExecutionStrategy.ExecuteImplementationAsync[TState,TResult](Func`4 operation, Func`4 verifySucceeded, TState state, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.ExecutionStrategy.ExecuteImplementationAsync[TState,TResult](Func`4 operation, Func`4 verifySucceeded, TState state, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.ExecutionStrategy.ExecuteAsync[TState,TResult](TState state, Func`4 operation, Func`4 verifySucceeded, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Query.Internal.FromSqlQueryingEnumerable`1.AsyncEnumerator.MoveNextAsync()
+   at Microsoft.EntityFrameworkCore.EntityFrameworkQueryableExtensions.ToListAsync[TSource](IQueryable`1 source, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.EntityFrameworkQueryableExtensions.ToListAsync[TSource](IQueryable`1 source, CancellationToken cancellationToken)
+   at SchoolApp.Domain.GenericRepository.Classe.GenericRepository`1.FromSqlRaw(String sql) in C:\Users\Marouane Win10 VM\Documents\DotnetProject.Source\SchoolApp\SchoolApp.Domain\GenericRepository\Classe\GenericRepository.cs:line 110
+   at SchoolApp.Client.GenericController.GenericController`2.GetFromSqlRaw(QueryParams queryParams) in C:\Users\Marouane Win10 VM\Documents\DotnetProject.Source\SchoolApp\SchoolApp.Client\GenericController\GenericController.cs:line 227
+ClientConnectionId:12cb0be4-9a0e-4f80-b6ea-f290b6729942
+Error Number:2812,State:62,Class:16 : Procédure stockée 'firstname' introuvable.
+---------------------------------------------------------------------------------------------------------------------
+[Error] [30/01/2022 01:22:16+00:00] [500 - InternalServerError] [POST] [SchoolApp.PersonController.Person - Add]: Exception => Microsoft.Data.SqlClient.SqlException (0x80131904): Procédure stockée 'firstname' introuvable.
+   at Microsoft.Data.SqlClient.SqlCommand.<>c.<ExecuteDbDataReaderAsync>b__188_0(Task`1 result)
+   at System.Threading.Tasks.ContinuationResultTaskFromResultTask`2.InnerInvoke()
+   at System.Threading.Tasks.Task.<>c.<.cctor>b__272_0(Object obj)
+   at System.Threading.ExecutionContext.RunInternal(ExecutionContext executionContext, ContextCallback callback, Object state)
+--- End of stack trace from previous location ---
+   at System.Threading.Tasks.Task.ExecuteWithThreadLocal(Task& currentTaskSlot, Thread threadPoolThread)
+--- End of stack trace from previous location ---
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Query.Internal.FromSqlQueryingEnumerable`1.AsyncEnumerator.InitializeReaderAsync(AsyncEnumerator enumerator, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.ExecutionStrategy.<>c__DisplayClass33_0`2.<<ExecuteAsync>b__0>d.MoveNext()
+--- End of stack trace from previous location ---
+   at Microsoft.EntityFrameworkCore.Storage.ExecutionStrategy.ExecuteImplementationAsync[TState,TResult](Func`4 operation, Func`4 verifySucceeded, TState state, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.ExecutionStrategy.ExecuteImplementationAsync[TState,TResult](Func`4 operation, Func`4 verifySucceeded, TState state, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.ExecutionStrategy.ExecuteAsync[TState,TResult](TState state, Func`4 operation, Func`4 verifySucceeded, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Query.Internal.FromSqlQueryingEnumerable`1.AsyncEnumerator.MoveNextAsync()
+   at Microsoft.EntityFrameworkCore.EntityFrameworkQueryableExtensions.ToListAsync[TSource](IQueryable`1 source, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.EntityFrameworkQueryableExtensions.ToListAsync[TSource](IQueryable`1 source, CancellationToken cancellationToken)
+   at SchoolApp.Domain.GenericRepository.Classe.GenericRepository`1.FromSqlRaw(String sql) in C:\Users\Marouane Win10 VM\Documents\DotnetProject.Source\SchoolApp\SchoolApp.Domain\GenericRepository\Classe\GenericRepository.cs:line 110
+   at SchoolApp.Client.GenericController.GenericController`2.GetFromSqlRaw(QueryParams queryParams) in C:\Users\Marouane Win10 VM\Documents\DotnetProject.Source\SchoolApp\SchoolApp.Client\GenericController\GenericController.cs:line 229
+ClientConnectionId:9025664b-c017-439f-b1d6-ace77eccdd91
+Error Number:2812,State:62,Class:16 : Procédure stockée 'firstname' introuvable.
+---------------------------------------------------------------------------------------------------------------------
+[Error] [30/01/2022 01:36:47+00:00] [500 - InternalServerError] [POST] [SchoolApp.PersonController.Person - Add]: Exception => Microsoft.Data.SqlClient.SqlException (0x80131904): Syntaxe incorrecte vers le mot clé 'FROM'.
+   at Microsoft.Data.SqlClient.SqlCommand.<>c.<ExecuteDbDataReaderAsync>b__188_0(Task`1 result)
+   at System.Threading.Tasks.ContinuationResultTaskFromResultTask`2.InnerInvoke()
+   at System.Threading.Tasks.Task.<>c.<.cctor>b__272_0(Object obj)
+   at System.Threading.ExecutionContext.RunInternal(ExecutionContext executionContext, ContextCallback callback, Object state)
+--- End of stack trace from previous location ---
+   at System.Threading.Tasks.Task.ExecuteWithThreadLocal(Task& currentTaskSlot, Thread threadPoolThread)
+--- End of stack trace from previous location ---
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Query.Internal.FromSqlQueryingEnumerable`1.AsyncEnumerator.InitializeReaderAsync(AsyncEnumerator enumerator, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.ExecutionStrategy.<>c__DisplayClass33_0`2.<<ExecuteAsync>b__0>d.MoveNext()
+--- End of stack trace from previous location ---
+   at Microsoft.EntityFrameworkCore.Storage.ExecutionStrategy.ExecuteImplementationAsync[TState,TResult](Func`4 operation, Func`4 verifySucceeded, TState state, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.ExecutionStrategy.ExecuteImplementationAsync[TState,TResult](Func`4 operation, Func`4 verifySucceeded, TState state, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.ExecutionStrategy.ExecuteAsync[TState,TResult](TState state, Func`4 operation, Func`4 verifySucceeded, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Query.Internal.FromSqlQueryingEnumerable`1.AsyncEnumerator.MoveNextAsync()
+   at Microsoft.EntityFrameworkCore.EntityFrameworkQueryableExtensions.ToListAsync[TSource](IQueryable`1 source, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.EntityFrameworkQueryableExtensions.ToListAsync[TSource](IQueryable`1 source, CancellationToken cancellationToken)
+   at SchoolApp.Domain.GenericRepository.Classe.GenericRepository`1.FromSqlRaw(String sql) in C:\Users\Marouane Win10 VM\Documents\DotnetProject.Source\SchoolApp\SchoolApp.Domain\GenericRepository\Classe\GenericRepository.cs:line 110
+   at SchoolApp.Client.GenericController.GenericController`2.GetFromSqlRaw(QueryParams queryParams) in C:\Users\Marouane Win10 VM\Documents\DotnetProject.Source\SchoolApp\SchoolApp.Client\GenericController\GenericController.cs:line 234
+ClientConnectionId:8e4bf884-d84d-4b21-85d7-288856476ac4
+Error Number:156,State:1,Class:15 : Syntaxe incorrecte vers le mot clé 'FROM'.
+---------------------------------------------------------------------------------------------------------------------
+[Error] [30/01/2022 01:39:15+00:00] [500 - InternalServerError] [POST] [SchoolApp.PersonController.Person - Add]: Exception => Microsoft.Data.SqlClient.SqlException (0x80131904): Syntaxe incorrecte vers le mot clé 'FROM'.
+   at Microsoft.Data.SqlClient.SqlCommand.<>c.<ExecuteDbDataReaderAsync>b__188_0(Task`1 result)
+   at System.Threading.Tasks.ContinuationResultTaskFromResultTask`2.InnerInvoke()
+   at System.Threading.Tasks.Task.<>c.<.cctor>b__272_0(Object obj)
+   at System.Threading.ExecutionContext.RunInternal(ExecutionContext executionContext, ContextCallback callback, Object state)
+--- End of stack trace from previous location ---
+   at System.Threading.Tasks.Task.ExecuteWithThreadLocal(Task& currentTaskSlot, Thread threadPoolThread)
+--- End of stack trace from previous location ---
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Query.Internal.FromSqlQueryingEnumerable`1.AsyncEnumerator.InitializeReaderAsync(AsyncEnumerator enumerator, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.ExecutionStrategy.<>c__DisplayClass33_0`2.<<ExecuteAsync>b__0>d.MoveNext()
+--- End of stack trace from previous location ---
+   at Microsoft.EntityFrameworkCore.Storage.ExecutionStrategy.ExecuteImplementationAsync[TState,TResult](Func`4 operation, Func`4 verifySucceeded, TState state, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.ExecutionStrategy.ExecuteImplementationAsync[TState,TResult](Func`4 operation, Func`4 verifySucceeded, TState state, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.ExecutionStrategy.ExecuteAsync[TState,TResult](TState state, Func`4 operation, Func`4 verifySucceeded, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Query.Internal.FromSqlQueryingEnumerable`1.AsyncEnumerator.MoveNextAsync()
+   at Microsoft.EntityFrameworkCore.EntityFrameworkQueryableExtensions.ToListAsync[TSource](IQueryable`1 source, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.EntityFrameworkQueryableExtensions.ToListAsync[TSource](IQueryable`1 source, CancellationToken cancellationToken)
+   at SchoolApp.Domain.GenericRepository.Classe.GenericRepository`1.FromSqlRaw(String sql) in C:\Users\Marouane Win10 VM\Documents\DotnetProject.Source\SchoolApp\SchoolApp.Domain\GenericRepository\Classe\GenericRepository.cs:line 110
+   at SchoolApp.Client.GenericController.GenericController`2.GetFromSqlRaw(QueryParams queryParams) in C:\Users\Marouane Win10 VM\Documents\DotnetProject.Source\SchoolApp\SchoolApp.Client\GenericController\GenericController.cs:line 235
+ClientConnectionId:684b5ca9-ef64-4bec-a673-ffef7d75b85b
+Error Number:156,State:1,Class:15 : Syntaxe incorrecte vers le mot clé 'FROM'.
+---------------------------------------------------------------------------------------------------------------------
+[Error] [30/01/2022 01:42:05+00:00] [500 - InternalServerError] [POST] [SchoolApp.PersonController.Person - Add]: Exception => AutoMapper.AutoMapperMappingException: Missing type map configuration or unsupported mapping.
+
+Mapping types:
+List`1 -> PersonViewModel
+System.Collections.Generic.List`1[[SchoolApp.Infrastructure.Models.Classes.Person, SchoolApp.Infrastructure, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]] -> SchoolApp.Client.DtoModel.Models.PersonViewModel
+   at lambda_method201(Closure , Object , PersonViewModel , ResolutionContext )
+   at SchoolApp.Client.GenericController.GenericController`2.GetFromSqlRaw(QueryParams queryParams) in C:\Users\Marouane Win10 VM\Documents\DotnetProject.Source\SchoolApp\SchoolApp.Client\GenericController\GenericController.cs:line 244 : Missing type map configuration or unsupported mapping.
+
+Mapping types:
+List`1 -> PersonViewModel
+System.Collections.Generic.List`1[[SchoolApp.Infrastructure.Models.Classes.Person, SchoolApp.Infrastructure, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]] -> SchoolApp.Client.DtoModel.Models.PersonViewModel
+---------------------------------------------------------------------------------------------------------------------
+[Error] [30/01/2022 01:44:18+00:00] [500 - InternalServerError] [POST] [SchoolApp.PersonController.Person - Add]: Exception => System.InvalidOperationException: The required column 'id' was not present in the results of a 'FromSql' operation.
+   at Microsoft.EntityFrameworkCore.Query.Internal.BufferedDataReader.BufferedDataRecord.InitializeFields()
+   at Microsoft.EntityFrameworkCore.Query.Internal.BufferedDataReader.BufferedDataRecord.InitializeAsync(DbDataReader reader, IReadOnlyList`1 columns, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Query.Internal.BufferedDataReader.InitializeAsync(IReadOnlyList`1 columns, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Query.Internal.BufferedDataReader.InitializeAsync(IReadOnlyList`1 columns, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Query.Internal.FromSqlQueryingEnumerable`1.AsyncEnumerator.InitializeReaderAsync(AsyncEnumerator enumerator, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.ExecutionStrategy.<>c__DisplayClass33_0`2.<<ExecuteAsync>b__0>d.MoveNext()
+--- End of stack trace from previous location ---
+   at Microsoft.EntityFrameworkCore.Storage.ExecutionStrategy.ExecuteImplementationAsync[TState,TResult](Func`4 operation, Func`4 verifySucceeded, TState state, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.ExecutionStrategy.ExecuteImplementationAsync[TState,TResult](Func`4 operation, Func`4 verifySucceeded, TState state, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.ExecutionStrategy.ExecuteAsync[TState,TResult](TState state, Func`4 operation, Func`4 verifySucceeded, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Query.Internal.FromSqlQueryingEnumerable`1.AsyncEnumerator.MoveNextAsync()
+   at Microsoft.EntityFrameworkCore.EntityFrameworkQueryableExtensions.ToListAsync[TSource](IQueryable`1 source, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.EntityFrameworkQueryableExtensions.ToListAsync[TSource](IQueryable`1 source, CancellationToken cancellationToken)
+   at SchoolApp.Domain.GenericRepository.Classe.GenericRepository`1.FromSqlRaw(String sql) in C:\Users\Marouane Win10 VM\Documents\DotnetProject.Source\SchoolApp\SchoolApp.Domain\GenericRepository\Classe\GenericRepository.cs:line 110
+   at SchoolApp.Client.GenericController.GenericController`2.GetFromSqlRaw(QueryParams queryParams) in C:\Users\Marouane Win10 VM\Documents\DotnetProject.Source\SchoolApp\SchoolApp.Client\GenericController\GenericController.cs:line 235 : The required column 'id' was not present in the results of a 'FromSql' operation.
+---------------------------------------------------------------------------------------------------------------------
+[Error] [30/01/2022 01:48:29+00:00] [500 - InternalServerError] [POST] [SchoolApp.PersonController.Person - Add]: Exception => System.InvalidOperationException: The required column 'id' was not present in the results of a 'FromSql' operation.
+   at Microsoft.EntityFrameworkCore.Query.Internal.BufferedDataReader.BufferedDataRecord.InitializeFields()
+   at Microsoft.EntityFrameworkCore.Query.Internal.BufferedDataReader.BufferedDataRecord.InitializeAsync(DbDataReader reader, IReadOnlyList`1 columns, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Query.Internal.BufferedDataReader.InitializeAsync(IReadOnlyList`1 columns, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Query.Internal.BufferedDataReader.InitializeAsync(IReadOnlyList`1 columns, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Query.Internal.FromSqlQueryingEnumerable`1.AsyncEnumerator.InitializeReaderAsync(AsyncEnumerator enumerator, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.ExecutionStrategy.<>c__DisplayClass33_0`2.<<ExecuteAsync>b__0>d.MoveNext()
+--- End of stack trace from previous location ---
+   at Microsoft.EntityFrameworkCore.Storage.ExecutionStrategy.ExecuteImplementationAsync[TState,TResult](Func`4 operation, Func`4 verifySucceeded, TState state, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.ExecutionStrategy.ExecuteImplementationAsync[TState,TResult](Func`4 operation, Func`4 verifySucceeded, TState state, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.ExecutionStrategy.ExecuteAsync[TState,TResult](TState state, Func`4 operation, Func`4 verifySucceeded, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Query.Internal.FromSqlQueryingEnumerable`1.AsyncEnumerator.MoveNextAsync()
+   at Microsoft.EntityFrameworkCore.EntityFrameworkQueryableExtensions.ToListAsync[TSource](IQueryable`1 source, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.EntityFrameworkQueryableExtensions.ToListAsync[TSource](IQueryable`1 source, CancellationToken cancellationToken)
+   at SchoolApp.Domain.GenericRepository.Classe.GenericRepository`1.FromSqlRaw(String sql) in C:\Users\Marouane Win10 VM\Documents\DotnetProject.Source\SchoolApp\SchoolApp.Domain\GenericRepository\Classe\GenericRepository.cs:line 110
+   at SchoolApp.Client.GenericController.GenericController`2.GetFromSqlRaw(QueryParams queryParams) in C:\Users\Marouane Win10 VM\Documents\DotnetProject.Source\SchoolApp\SchoolApp.Client\GenericController\GenericController.cs:line 235 : The required column 'id' was not present in the results of a 'FromSql' operation.
+---------------------------------------------------------------------------------------------------------------------
+[Error] [30/01/2022 01:50:51+00:00] [500 - InternalServerError] [POST] [SchoolApp.PersonController.Person - Add]: Exception => System.InvalidOperationException: The required column 'createdate' was not present in the results of a 'FromSql' operation.
+   at Microsoft.EntityFrameworkCore.Query.Internal.BufferedDataReader.BufferedDataRecord.InitializeFields()
+   at Microsoft.EntityFrameworkCore.Query.Internal.BufferedDataReader.BufferedDataRecord.InitializeAsync(DbDataReader reader, IReadOnlyList`1 columns, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Query.Internal.BufferedDataReader.InitializeAsync(IReadOnlyList`1 columns, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Query.Internal.BufferedDataReader.InitializeAsync(IReadOnlyList`1 columns, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Query.Internal.FromSqlQueryingEnumerable`1.AsyncEnumerator.InitializeReaderAsync(AsyncEnumerator enumerator, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.ExecutionStrategy.<>c__DisplayClass33_0`2.<<ExecuteAsync>b__0>d.MoveNext()
+--- End of stack trace from previous location ---
+   at Microsoft.EntityFrameworkCore.Storage.ExecutionStrategy.ExecuteImplementationAsync[TState,TResult](Func`4 operation, Func`4 verifySucceeded, TState state, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.ExecutionStrategy.ExecuteImplementationAsync[TState,TResult](Func`4 operation, Func`4 verifySucceeded, TState state, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.ExecutionStrategy.ExecuteAsync[TState,TResult](TState state, Func`4 operation, Func`4 verifySucceeded, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Query.Internal.FromSqlQueryingEnumerable`1.AsyncEnumerator.MoveNextAsync()
+   at Microsoft.EntityFrameworkCore.EntityFrameworkQueryableExtensions.ToListAsync[TSource](IQueryable`1 source, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.EntityFrameworkQueryableExtensions.ToListAsync[TSource](IQueryable`1 source, CancellationToken cancellationToken)
+   at SchoolApp.Domain.GenericRepository.Classe.GenericRepository`1.FromSqlRaw(String sql) in C:\Users\Marouane Win10 VM\Documents\DotnetProject.Source\SchoolApp\SchoolApp.Domain\GenericRepository\Classe\GenericRepository.cs:line 110
+   at SchoolApp.Client.GenericController.GenericController`2.GetFromSqlRaw(QueryParams queryParams) in C:\Users\Marouane Win10 VM\Documents\DotnetProject.Source\SchoolApp\SchoolApp.Client\GenericController\GenericController.cs:line 235 : The required column 'createdate' was not present in the results of a 'FromSql' operation.
+---------------------------------------------------------------------------------------------------------------------
+[Error] [30/01/2022 01:52:24+00:00] [500 - InternalServerError] [POST] [SchoolApp.PersonController.Person - Add]: Exception => AutoMapper.AutoMapperMappingException: Missing type map configuration or unsupported mapping.
+
+Mapping types:
+List`1 -> PersonViewModel
+System.Collections.Generic.List`1[[SchoolApp.Infrastructure.Models.Classes.Person, SchoolApp.Infrastructure, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]] -> SchoolApp.Client.DtoModel.Models.PersonViewModel
+   at lambda_method223(Closure , Object , PersonViewModel , ResolutionContext )
+   at SchoolApp.Client.GenericController.GenericController`2.GetFromSqlRaw(QueryParams queryParams) in C:\Users\Marouane Win10 VM\Documents\DotnetProject.Source\SchoolApp\SchoolApp.Client\GenericController\GenericController.cs:line 244 : Missing type map configuration or unsupported mapping.
+
+Mapping types:
+List`1 -> PersonViewModel
+System.Collections.Generic.List`1[[SchoolApp.Infrastructure.Models.Classes.Person, SchoolApp.Infrastructure, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]] -> SchoolApp.Client.DtoModel.Models.PersonViewModel
+---------------------------------------------------------------------------------------------------------------------
+[Error] [30/01/2022 01:57:32+00:00] [500 - InternalServerError] [POST] [SchoolApp.PersonController.Person - Add]: Exception => AutoMapper.AutoMapperMappingException: Missing type map configuration or unsupported mapping.
+
+Mapping types:
+List`1 -> Person
+System.Collections.Generic.List`1[[SchoolApp.Infrastructure.Models.Classes.Person, SchoolApp.Infrastructure, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]] -> SchoolApp.Infrastructure.Models.Classes.Person
+   at lambda_method201(Closure , Object , Person , ResolutionContext )
+   at SchoolApp.Client.GenericController.GenericController`2.GetFromSqlRaw(QueryParams queryParams) in C:\Users\Marouane Win10 VM\Documents\DotnetProject.Source\SchoolApp\SchoolApp.Client\GenericController\GenericController.cs:line 244 : Missing type map configuration or unsupported mapping.
+
+Mapping types:
+List`1 -> Person
+System.Collections.Generic.List`1[[SchoolApp.Infrastructure.Models.Classes.Person, SchoolApp.Infrastructure, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]] -> SchoolApp.Infrastructure.Models.Classes.Person
+---------------------------------------------------------------------------------------------------------------------
+[Error] [30/01/2022 01:59:45+00:00] [500 - InternalServerError] [POST] [SchoolApp.PersonController.Person - Add]: Exception => System.InvalidOperationException: The required column 'createdate' was not present in the results of a 'FromSql' operation.
+   at Microsoft.EntityFrameworkCore.Query.Internal.BufferedDataReader.BufferedDataRecord.InitializeFields()
+   at Microsoft.EntityFrameworkCore.Query.Internal.BufferedDataReader.BufferedDataRecord.InitializeAsync(DbDataReader reader, IReadOnlyList`1 columns, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Query.Internal.BufferedDataReader.InitializeAsync(IReadOnlyList`1 columns, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Query.Internal.BufferedDataReader.InitializeAsync(IReadOnlyList`1 columns, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Query.Internal.FromSqlQueryingEnumerable`1.AsyncEnumerator.InitializeReaderAsync(AsyncEnumerator enumerator, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.ExecutionStrategy.<>c__DisplayClass33_0`2.<<ExecuteAsync>b__0>d.MoveNext()
+--- End of stack trace from previous location ---
+   at Microsoft.EntityFrameworkCore.Storage.ExecutionStrategy.ExecuteImplementationAsync[TState,TResult](Func`4 operation, Func`4 verifySucceeded, TState state, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.ExecutionStrategy.ExecuteImplementationAsync[TState,TResult](Func`4 operation, Func`4 verifySucceeded, TState state, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.ExecutionStrategy.ExecuteAsync[TState,TResult](TState state, Func`4 operation, Func`4 verifySucceeded, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Query.Internal.FromSqlQueryingEnumerable`1.AsyncEnumerator.MoveNextAsync()
+   at Microsoft.EntityFrameworkCore.EntityFrameworkQueryableExtensions.ToListAsync[TSource](IQueryable`1 source, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.EntityFrameworkQueryableExtensions.ToListAsync[TSource](IQueryable`1 source, CancellationToken cancellationToken)
+   at SchoolApp.Domain.GenericRepository.Classe.GenericRepository`1.FromSqlRaw(String sql) in C:\Users\Marouane Win10 VM\Documents\DotnetProject.Source\SchoolApp\SchoolApp.Domain\GenericRepository\Classe\GenericRepository.cs:line 110
+   at SchoolApp.Client.GenericController.GenericController`2.GetFromSqlRaw(QueryParams queryParams) in C:\Users\Marouane Win10 VM\Documents\DotnetProject.Source\SchoolApp\SchoolApp.Client\GenericController\GenericController.cs:line 235 : The required column 'createdate' was not present in the results of a 'FromSql' operation.
+---------------------------------------------------------------------------------------------------------------------
+[Error] [30/01/2022 02:16:39+00:00] [500 - InternalServerError] [POST] [SchoolApp.PersonController.Person - Add]: Exception => System.InvalidOperationException: The required column 'updatedby' was not present in the results of a 'FromSql' operation.
+   at Microsoft.EntityFrameworkCore.Query.Internal.BufferedDataReader.BufferedDataRecord.InitializeFields()
+   at Microsoft.EntityFrameworkCore.Query.Internal.BufferedDataReader.BufferedDataRecord.InitializeAsync(DbDataReader reader, IReadOnlyList`1 columns, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Query.Internal.BufferedDataReader.InitializeAsync(IReadOnlyList`1 columns, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Query.Internal.BufferedDataReader.InitializeAsync(IReadOnlyList`1 columns, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Query.Internal.FromSqlQueryingEnumerable`1.AsyncEnumerator.InitializeReaderAsync(AsyncEnumerator enumerator, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.ExecutionStrategy.<>c__DisplayClass33_0`2.<<ExecuteAsync>b__0>d.MoveNext()
+--- End of stack trace from previous location ---
+   at Microsoft.EntityFrameworkCore.Storage.ExecutionStrategy.ExecuteImplementationAsync[TState,TResult](Func`4 operation, Func`4 verifySucceeded, TState state, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.ExecutionStrategy.ExecuteImplementationAsync[TState,TResult](Func`4 operation, Func`4 verifySucceeded, TState state, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.ExecutionStrategy.ExecuteAsync[TState,TResult](TState state, Func`4 operation, Func`4 verifySucceeded, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Query.Internal.FromSqlQueryingEnumerable`1.AsyncEnumerator.MoveNextAsync()
+   at Microsoft.EntityFrameworkCore.EntityFrameworkQueryableExtensions.ToListAsync[TSource](IQueryable`1 source, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.EntityFrameworkQueryableExtensions.ToListAsync[TSource](IQueryable`1 source, CancellationToken cancellationToken)
+   at SchoolApp.Domain.GenericRepository.Classe.GenericRepository`1.FromSqlRaw(String sql) in C:\Users\Marouane Win10 VM\Documents\DotnetProject.Source\SchoolApp\SchoolApp.Domain\GenericRepository\Classe\GenericRepository.cs:line 110
+   at SchoolApp.Client.GenericController.GenericController`2.GetFromSqlRaw(QueryParams queryParams) in C:\Users\Marouane Win10 VM\Documents\DotnetProject.Source\SchoolApp\SchoolApp.Client\GenericController\GenericController.cs:line 235 : The required column 'updatedby' was not present in the results of a 'FromSql' operation.
+---------------------------------------------------------------------------------------------------------------------
+[Error] [30/01/2022 02:20:17+00:00] [500 - InternalServerError] [POST] [SchoolApp.PersonController.Person - Add]: Exception => Microsoft.Data.SqlClient.SqlException (0x80131904): Syntaxe incorrecte vers 'updatedbyHAVING'.
+   at Microsoft.Data.SqlClient.SqlCommand.<>c.<ExecuteDbDataReaderAsync>b__188_0(Task`1 result)
+   at System.Threading.Tasks.ContinuationResultTaskFromResultTask`2.InnerInvoke()
+   at System.Threading.ExecutionContext.RunInternal(ExecutionContext executionContext, ContextCallback callback, Object state)
+--- End of stack trace from previous location ---
+   at System.Threading.Tasks.Task.ExecuteWithThreadLocal(Task& currentTaskSlot, Thread threadPoolThread)
+--- End of stack trace from previous location ---
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Query.Internal.FromSqlQueryingEnumerable`1.AsyncEnumerator.InitializeReaderAsync(AsyncEnumerator enumerator, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.ExecutionStrategy.<>c__DisplayClass33_0`2.<<ExecuteAsync>b__0>d.MoveNext()
+--- End of stack trace from previous location ---
+   at Microsoft.EntityFrameworkCore.Storage.ExecutionStrategy.ExecuteImplementationAsync[TState,TResult](Func`4 operation, Func`4 verifySucceeded, TState state, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.ExecutionStrategy.ExecuteImplementationAsync[TState,TResult](Func`4 operation, Func`4 verifySucceeded, TState state, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.ExecutionStrategy.ExecuteAsync[TState,TResult](TState state, Func`4 operation, Func`4 verifySucceeded, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Query.Internal.FromSqlQueryingEnumerable`1.AsyncEnumerator.MoveNextAsync()
+   at Microsoft.EntityFrameworkCore.EntityFrameworkQueryableExtensions.ToListAsync[TSource](IQueryable`1 source, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.EntityFrameworkQueryableExtensions.ToListAsync[TSource](IQueryable`1 source, CancellationToken cancellationToken)
+   at SchoolApp.Domain.GenericRepository.Classe.GenericRepository`1.FromSqlRaw(String sql) in C:\Users\Marouane Win10 VM\Documents\DotnetProject.Source\SchoolApp\SchoolApp.Domain\GenericRepository\Classe\GenericRepository.cs:line 110
+   at SchoolApp.Client.GenericController.GenericController`2.GetFromSqlRaw(QueryParams queryParams) in C:\Users\Marouane Win10 VM\Documents\DotnetProject.Source\SchoolApp\SchoolApp.Client\GenericController\GenericController.cs:line 235
+ClientConnectionId:2c74d0a2-573d-4f26-890b-23b841d51bf7
+Error Number:102,State:1,Class:15 : Syntaxe incorrecte vers 'updatedbyHAVING'.
+---------------------------------------------------------------------------------------------------------------------
+[Error] [30/01/2022 02:26:04+00:00] [500 - InternalServerError] [POST] [SchoolApp.PersonController.Person - Add]: Exception => Microsoft.Data.SqlClient.SqlException (0x80131904): Syntaxe incorrecte vers 'LIMIT'.
+   at Microsoft.Data.SqlClient.SqlCommand.<>c.<ExecuteDbDataReaderAsync>b__188_0(Task`1 result)
+   at System.Threading.Tasks.ContinuationResultTaskFromResultTask`2.InnerInvoke()
+   at System.Threading.Tasks.Task.<>c.<.cctor>b__272_0(Object obj)
+   at System.Threading.ExecutionContext.RunInternal(ExecutionContext executionContext, ContextCallback callback, Object state)
+--- End of stack trace from previous location ---
+   at System.Threading.Tasks.Task.ExecuteWithThreadLocal(Task& currentTaskSlot, Thread threadPoolThread)
+--- End of stack trace from previous location ---
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Query.Internal.FromSqlQueryingEnumerable`1.AsyncEnumerator.InitializeReaderAsync(AsyncEnumerator enumerator, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.ExecutionStrategy.<>c__DisplayClass33_0`2.<<ExecuteAsync>b__0>d.MoveNext()
+--- End of stack trace from previous location ---
+   at Microsoft.EntityFrameworkCore.Storage.ExecutionStrategy.ExecuteImplementationAsync[TState,TResult](Func`4 operation, Func`4 verifySucceeded, TState state, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.ExecutionStrategy.ExecuteImplementationAsync[TState,TResult](Func`4 operation, Func`4 verifySucceeded, TState state, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.ExecutionStrategy.ExecuteAsync[TState,TResult](TState state, Func`4 operation, Func`4 verifySucceeded, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Query.Internal.FromSqlQueryingEnumerable`1.AsyncEnumerator.MoveNextAsync()
+   at Microsoft.EntityFrameworkCore.EntityFrameworkQueryableExtensions.ToListAsync[TSource](IQueryable`1 source, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.EntityFrameworkQueryableExtensions.ToListAsync[TSource](IQueryable`1 source, CancellationToken cancellationToken)
+   at SchoolApp.Domain.GenericRepository.Classe.GenericRepository`1.FromSqlRaw(String sql) in C:\Users\Marouane Win10 VM\Documents\DotnetProject.Source\SchoolApp\SchoolApp.Domain\GenericRepository\Classe\GenericRepository.cs:line 110
+   at SchoolApp.Client.GenericController.GenericController`2.GetFromSqlRaw(QueryParams queryParams) in C:\Users\Marouane Win10 VM\Documents\DotnetProject.Source\SchoolApp\SchoolApp.Client\GenericController\GenericController.cs:line 245
+ClientConnectionId:7ee1c132-535c-4854-80c3-f7819e6b1f46
+Error Number:102,State:1,Class:15 : Syntaxe incorrecte vers 'LIMIT'.
+---------------------------------------------------------------------------------------------------------------------
+[Error] [30/01/2022 02:33:21+00:00] [500 - InternalServerError] [POST] [SchoolApp.PersonController.Person - Add]: Exception => Microsoft.Data.SqlClient.SqlException (0x80131904): La colonne 'persons.updatedby' n'est pas valide dans la liste de sélection parce qu'elle n'est pas contenue dans une fonction d'agrégation ou dans la clause GROUP BY.
+   at Microsoft.Data.SqlClient.SqlCommand.<>c.<ExecuteDbDataReaderAsync>b__188_0(Task`1 result)
+   at System.Threading.Tasks.ContinuationResultTaskFromResultTask`2.InnerInvoke()
+   at System.Threading.Tasks.Task.<>c.<.cctor>b__272_0(Object obj)
+   at System.Threading.ExecutionContext.RunInternal(ExecutionContext executionContext, ContextCallback callback, Object state)
+--- End of stack trace from previous location ---
+   at System.Threading.Tasks.Task.ExecuteWithThreadLocal(Task& currentTaskSlot, Thread threadPoolThread)
+--- End of stack trace from previous location ---
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Query.Internal.FromSqlQueryingEnumerable`1.AsyncEnumerator.InitializeReaderAsync(AsyncEnumerator enumerator, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.ExecutionStrategy.<>c__DisplayClass33_0`2.<<ExecuteAsync>b__0>d.MoveNext()
+--- End of stack trace from previous location ---
+   at Microsoft.EntityFrameworkCore.Storage.ExecutionStrategy.ExecuteImplementationAsync[TState,TResult](Func`4 operation, Func`4 verifySucceeded, TState state, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.ExecutionStrategy.ExecuteImplementationAsync[TState,TResult](Func`4 operation, Func`4 verifySucceeded, TState state, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.ExecutionStrategy.ExecuteAsync[TState,TResult](TState state, Func`4 operation, Func`4 verifySucceeded, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Query.Internal.FromSqlQueryingEnumerable`1.AsyncEnumerator.MoveNextAsync()
+   at Microsoft.EntityFrameworkCore.EntityFrameworkQueryableExtensions.ToListAsync[TSource](IQueryable`1 source, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.EntityFrameworkQueryableExtensions.ToListAsync[TSource](IQueryable`1 source, CancellationToken cancellationToken)
+   at SchoolApp.Domain.GenericRepository.Classe.GenericRepository`1.FromSqlRaw(String sql) in C:\Users\Marouane Win10 VM\Documents\DotnetProject.Source\SchoolApp\SchoolApp.Domain\GenericRepository\Classe\GenericRepository.cs:line 110
+   at SchoolApp.Client.GenericController.GenericController`2.GetFromSqlRaw(QueryParams queryParams) in C:\Users\Marouane Win10 VM\Documents\DotnetProject.Source\SchoolApp\SchoolApp.Client\GenericController\GenericController.cs:line 243
+ClientConnectionId:7eaef23d-4fb6-4a13-a674-e52c027e7a2a
+Error Number:8120,State:1,Class:16 : La colonne 'persons.updatedby' n'est pas valide dans la liste de sélection parce qu'elle n'est pas contenue dans une fonction d'agrégation ou dans la clause GROUP BY.
+---------------------------------------------------------------------------------------------------------------------

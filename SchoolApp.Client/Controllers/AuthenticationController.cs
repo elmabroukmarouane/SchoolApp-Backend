@@ -63,9 +63,7 @@ public class AuthenticationController : ControllerBase
             _logger.LoggingMessageError("SchoolApp", (int)HttpStatusCode.InternalServerError, HttpStatusCode.InternalServerError.ToString(), HttpContext.Request.Method, ControllerContext.RouteData.Values["controller"].ToString(), ControllerContext.RouteData.Values["controller"].ToString() + " - Add", ex, _currentEnvironment.ContentRootPath);
             return StatusCode(500, new
             {
-                Message = "Authentication failed !",
-                Exception = ex.Message,
-                ex.InnerException
+                Message = "Authentication failed !"
             });
         }
     }

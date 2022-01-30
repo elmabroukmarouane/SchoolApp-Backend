@@ -20,7 +20,8 @@ public interface IGenericRepository<TEntity> where TEntity : Entity
         bool disableTracking = true,
         int take = 0, int offset = 0
     );
-    Task<IList<TEntity>> FromSqlRaw(string sql, params object[] parameters);
+    // Task<IList<TEntity>> FromSqlRaw(string sql, params object[] parameters);
+    Task<IList<TEntity>> FromSqlRaw(string sql);
     TEntity Update(TEntity entity);
     void UpdateByState(TEntity entity);
     IList<TEntity> Update(IList<TEntity> entities);

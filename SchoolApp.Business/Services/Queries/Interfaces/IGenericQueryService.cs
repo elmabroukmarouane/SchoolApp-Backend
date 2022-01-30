@@ -17,8 +17,9 @@ public interface IGenericQueryService<TEntity> where TEntity : Entity
         Expression<Func<TEntity, bool>>? predicate = null,
         string includes = "",
         bool disableTracking = true);
-    Task<IList<TEntity>> GetFromSqlRaw(string sql,
-        params object[] parameters);
+    // Task<IList<TEntity>> GetFromSqlRaw(string sql,
+    //     params object[] parameters);
+    Task<IList<TEntity>> GetFromSqlRaw(string sql);
     #endregion
 
     #region OTHER
