@@ -2,7 +2,6 @@
 using System;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
-using Microsoft.EntityFrameworkCore.Metadata;
 using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using SchoolApp.Infrastructure.DatabaseContext;
@@ -12,46 +11,40 @@ using SchoolApp.Infrastructure.DatabaseContext;
 namespace SchoolApp.Infrastructure.Migrations
 {
     [DbContext(typeof(DatabaseContextSchool))]
-    [Migration("20220129225632_DBSchemaV1")]
-    partial class DBSchemaV1
+    [Migration("20220130110016_DBSchemaV2")]
+    partial class DBSchemaV2
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
-            modelBuilder
-                .HasAnnotation("ProductVersion", "6.0.1")
-                .HasAnnotation("Relational:MaxIdentifierLength", 128);
-
-            SqlServerModelBuilderExtensions.UseIdentityColumns(modelBuilder, 1L, 1);
+            modelBuilder.HasAnnotation("ProductVersion", "6.0.1");
 
             modelBuilder.Entity("SchoolApp.Infrastructure.Models.Classes.Course", b =>
                 {
                     b.Property<int>("id")
                         .ValueGeneratedOnAdd()
-                        .HasColumnType("int");
-
-                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("id"), 1L, 1);
+                        .HasColumnType("INTEGER");
 
                     b.Property<string>("coursename")
-                        .HasColumnType("nvarchar(max)");
+                        .HasColumnType("TEXT");
 
                     b.Property<DateTime?>("createdate")
-                        .HasColumnType("datetime2");
+                        .HasColumnType("TEXT");
 
                     b.Property<string>("createdby")
-                        .HasColumnType("nvarchar(max)");
+                        .HasColumnType("TEXT");
 
                     b.Property<int>("professorid")
-                        .HasColumnType("int");
+                        .HasColumnType("INTEGER");
 
                     b.Property<int>("studentid")
-                        .HasColumnType("int");
+                        .HasColumnType("INTEGER");
 
                     b.Property<DateTime?>("updatedate")
-                        .HasColumnType("datetime2");
+                        .HasColumnType("TEXT");
 
                     b.Property<string>("updatedby")
-                        .HasColumnType("nvarchar(max)");
+                        .HasColumnType("TEXT");
 
                     b.HasKey("id");
 
@@ -66,33 +59,33 @@ namespace SchoolApp.Infrastructure.Migrations
                         {
                             id = 1,
                             coursename = "Course 1",
-                            createdate = new DateTime(2022, 1, 29, 23, 56, 32, 88, DateTimeKind.Local).AddTicks(9642),
+                            createdate = new DateTime(2022, 1, 30, 12, 0, 16, 49, DateTimeKind.Local).AddTicks(2053),
                             createdby = "Seed Data",
                             professorid = 1,
                             studentid = 1,
-                            updatedate = new DateTime(2022, 1, 29, 23, 56, 32, 88, DateTimeKind.Local).AddTicks(9652),
+                            updatedate = new DateTime(2022, 1, 30, 12, 0, 16, 49, DateTimeKind.Local).AddTicks(2064),
                             updatedby = "Seed Data"
                         },
                         new
                         {
                             id = 2,
                             coursename = "Course 2",
-                            createdate = new DateTime(2022, 1, 29, 23, 56, 32, 88, DateTimeKind.Local).AddTicks(9658),
+                            createdate = new DateTime(2022, 1, 30, 12, 0, 16, 49, DateTimeKind.Local).AddTicks(2069),
                             createdby = "Seed Data",
                             professorid = 2,
                             studentid = 2,
-                            updatedate = new DateTime(2022, 1, 29, 23, 56, 32, 88, DateTimeKind.Local).AddTicks(9660),
+                            updatedate = new DateTime(2022, 1, 30, 12, 0, 16, 49, DateTimeKind.Local).AddTicks(2071),
                             updatedby = "Seed Data"
                         },
                         new
                         {
                             id = 3,
                             coursename = "Course 3",
-                            createdate = new DateTime(2022, 1, 29, 23, 56, 32, 88, DateTimeKind.Local).AddTicks(9663),
+                            createdate = new DateTime(2022, 1, 30, 12, 0, 16, 49, DateTimeKind.Local).AddTicks(2074),
                             createdby = "Seed Data",
                             professorid = 3,
                             studentid = 3,
-                            updatedate = new DateTime(2022, 1, 29, 23, 56, 32, 88, DateTimeKind.Local).AddTicks(9665),
+                            updatedate = new DateTime(2022, 1, 30, 12, 0, 16, 49, DateTimeKind.Local).AddTicks(2075),
                             updatedby = "Seed Data"
                         });
                 });
@@ -101,24 +94,22 @@ namespace SchoolApp.Infrastructure.Migrations
                 {
                     b.Property<int>("id")
                         .ValueGeneratedOnAdd()
-                        .HasColumnType("int");
-
-                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("id"), 1L, 1);
+                        .HasColumnType("INTEGER");
 
                     b.Property<DateTime?>("createdate")
-                        .HasColumnType("datetime2");
+                        .HasColumnType("TEXT");
 
                     b.Property<string>("createdby")
-                        .HasColumnType("nvarchar(max)");
+                        .HasColumnType("TEXT");
 
                     b.Property<string>("levelname")
-                        .HasColumnType("nvarchar(max)");
+                        .HasColumnType("TEXT");
 
                     b.Property<DateTime?>("updatedate")
-                        .HasColumnType("datetime2");
+                        .HasColumnType("TEXT");
 
                     b.Property<string>("updatedby")
-                        .HasColumnType("nvarchar(max)");
+                        .HasColumnType("TEXT");
 
                     b.HasKey("id");
 
@@ -128,28 +119,28 @@ namespace SchoolApp.Infrastructure.Migrations
                         new
                         {
                             id = 1,
-                            createdate = new DateTime(2022, 1, 29, 23, 56, 32, 88, DateTimeKind.Local).AddTicks(3459),
+                            createdate = new DateTime(2022, 1, 30, 12, 0, 16, 48, DateTimeKind.Local).AddTicks(5948),
                             createdby = "Seed Data",
                             levelname = "Level 1",
-                            updatedate = new DateTime(2022, 1, 29, 23, 56, 32, 88, DateTimeKind.Local).AddTicks(3497),
+                            updatedate = new DateTime(2022, 1, 30, 12, 0, 16, 48, DateTimeKind.Local).AddTicks(5987),
                             updatedby = "Seed Data"
                         },
                         new
                         {
                             id = 2,
-                            createdate = new DateTime(2022, 1, 29, 23, 56, 32, 88, DateTimeKind.Local).AddTicks(3503),
+                            createdate = new DateTime(2022, 1, 30, 12, 0, 16, 48, DateTimeKind.Local).AddTicks(5991),
                             createdby = "Seed Data",
                             levelname = "Level 2",
-                            updatedate = new DateTime(2022, 1, 29, 23, 56, 32, 88, DateTimeKind.Local).AddTicks(3505),
+                            updatedate = new DateTime(2022, 1, 30, 12, 0, 16, 48, DateTimeKind.Local).AddTicks(5993),
                             updatedby = "Seed Data"
                         },
                         new
                         {
                             id = 3,
-                            createdate = new DateTime(2022, 1, 29, 23, 56, 32, 88, DateTimeKind.Local).AddTicks(3507),
+                            createdate = new DateTime(2022, 1, 30, 12, 0, 16, 48, DateTimeKind.Local).AddTicks(5996),
                             createdby = "Seed Data",
                             levelname = "Level 3",
-                            updatedate = new DateTime(2022, 1, 29, 23, 56, 32, 88, DateTimeKind.Local).AddTicks(3509),
+                            updatedate = new DateTime(2022, 1, 30, 12, 0, 16, 48, DateTimeKind.Local).AddTicks(5997),
                             updatedby = "Seed Data"
                         });
                 });
@@ -158,30 +149,28 @@ namespace SchoolApp.Infrastructure.Migrations
                 {
                     b.Property<int>("id")
                         .ValueGeneratedOnAdd()
-                        .HasColumnType("int");
-
-                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("id"), 1L, 1);
+                        .HasColumnType("INTEGER");
 
                     b.Property<DateTime>("birthdate")
-                        .HasColumnType("datetime2");
+                        .HasColumnType("TEXT");
 
                     b.Property<DateTime?>("createdate")
-                        .HasColumnType("datetime2");
+                        .HasColumnType("TEXT");
 
                     b.Property<string>("createdby")
-                        .HasColumnType("nvarchar(max)");
+                        .HasColumnType("TEXT");
 
                     b.Property<string>("firstname")
-                        .HasColumnType("nvarchar(max)");
+                        .HasColumnType("TEXT");
 
                     b.Property<string>("lastname")
-                        .HasColumnType("nvarchar(max)");
+                        .HasColumnType("TEXT");
 
                     b.Property<DateTime?>("updatedate")
-                        .HasColumnType("datetime2");
+                        .HasColumnType("TEXT");
 
                     b.Property<string>("updatedby")
-                        .HasColumnType("nvarchar(max)");
+                        .HasColumnType("TEXT");
 
                     b.HasKey("id");
 
@@ -191,67 +180,67 @@ namespace SchoolApp.Infrastructure.Migrations
                         new
                         {
                             id = 1,
-                            birthdate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            createdate = new DateTime(2022, 1, 29, 23, 56, 32, 88, DateTimeKind.Local).AddTicks(3801),
+                            birthdate = new DateTime(2022, 1, 30, 12, 0, 16, 48, DateTimeKind.Local).AddTicks(6192),
+                            createdate = new DateTime(2022, 1, 30, 12, 0, 16, 48, DateTimeKind.Local).AddTicks(6194),
                             createdby = "Seed Data",
                             firstname = "Marouane",
                             lastname = "EL MABROUK",
-                            updatedate = new DateTime(2022, 1, 29, 23, 56, 32, 88, DateTimeKind.Local).AddTicks(3806),
+                            updatedate = new DateTime(2022, 1, 30, 12, 0, 16, 48, DateTimeKind.Local).AddTicks(6197),
                             updatedby = "Seed Data"
                         },
                         new
                         {
                             id = 2,
-                            birthdate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            createdate = new DateTime(2022, 1, 29, 23, 56, 32, 88, DateTimeKind.Local).AddTicks(3810),
+                            birthdate = new DateTime(2022, 1, 30, 12, 0, 16, 48, DateTimeKind.Local).AddTicks(6201),
+                            createdate = new DateTime(2022, 1, 30, 12, 0, 16, 48, DateTimeKind.Local).AddTicks(6203),
                             createdby = "Seed Data",
                             firstname = "Smith",
                             lastname = "JOHN",
-                            updatedate = new DateTime(2022, 1, 29, 23, 56, 32, 88, DateTimeKind.Local).AddTicks(3811),
+                            updatedate = new DateTime(2022, 1, 30, 12, 0, 16, 48, DateTimeKind.Local).AddTicks(6204),
                             updatedby = "Seed Data"
                         },
                         new
                         {
                             id = 3,
-                            birthdate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            createdate = new DateTime(2022, 1, 29, 23, 56, 32, 88, DateTimeKind.Local).AddTicks(3814),
+                            birthdate = new DateTime(2022, 1, 30, 12, 0, 16, 48, DateTimeKind.Local).AddTicks(6206),
+                            createdate = new DateTime(2022, 1, 30, 12, 0, 16, 48, DateTimeKind.Local).AddTicks(6208),
                             createdby = "Seed Data",
                             firstname = "William",
                             lastname = "MILLER",
-                            updatedate = new DateTime(2022, 1, 29, 23, 56, 32, 88, DateTimeKind.Local).AddTicks(3816),
+                            updatedate = new DateTime(2022, 1, 30, 12, 0, 16, 48, DateTimeKind.Local).AddTicks(6210),
                             updatedby = "Seed Data"
                         },
                         new
                         {
                             id = 4,
-                            birthdate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            createdate = new DateTime(2022, 1, 29, 23, 56, 32, 88, DateTimeKind.Local).AddTicks(3818),
+                            birthdate = new DateTime(2022, 1, 30, 12, 0, 16, 48, DateTimeKind.Local).AddTicks(6212),
+                            createdate = new DateTime(2022, 1, 30, 12, 0, 16, 48, DateTimeKind.Local).AddTicks(6214),
                             createdby = "Seed Data",
                             firstname = "Prof",
                             lastname = "EL MABROUK",
-                            updatedate = new DateTime(2022, 1, 29, 23, 56, 32, 88, DateTimeKind.Local).AddTicks(3820),
+                            updatedate = new DateTime(2022, 1, 30, 12, 0, 16, 48, DateTimeKind.Local).AddTicks(6215),
                             updatedby = "Seed Data"
                         },
                         new
                         {
                             id = 5,
-                            birthdate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            createdate = new DateTime(2022, 1, 29, 23, 56, 32, 88, DateTimeKind.Local).AddTicks(3823),
+                            birthdate = new DateTime(2022, 1, 30, 12, 0, 16, 48, DateTimeKind.Local).AddTicks(6217),
+                            createdate = new DateTime(2022, 1, 30, 12, 0, 16, 48, DateTimeKind.Local).AddTicks(6218),
                             createdby = "Seed Data",
                             firstname = "Prof",
                             lastname = "JOHN",
-                            updatedate = new DateTime(2022, 1, 29, 23, 56, 32, 88, DateTimeKind.Local).AddTicks(3824),
+                            updatedate = new DateTime(2022, 1, 30, 12, 0, 16, 48, DateTimeKind.Local).AddTicks(6220),
                             updatedby = "Seed Data"
                         },
                         new
                         {
                             id = 6,
-                            birthdate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            createdate = new DateTime(2022, 1, 29, 23, 56, 32, 88, DateTimeKind.Local).AddTicks(3829),
+                            birthdate = new DateTime(2022, 1, 30, 12, 0, 16, 48, DateTimeKind.Local).AddTicks(6224),
+                            createdate = new DateTime(2022, 1, 30, 12, 0, 16, 48, DateTimeKind.Local).AddTicks(6226),
                             createdby = "Seed Data",
                             firstname = "Prof",
                             lastname = "MILLER",
-                            updatedate = new DateTime(2022, 1, 29, 23, 56, 32, 88, DateTimeKind.Local).AddTicks(3831),
+                            updatedate = new DateTime(2022, 1, 30, 12, 0, 16, 48, DateTimeKind.Local).AddTicks(6226),
                             updatedby = "Seed Data"
                         });
                 });
@@ -260,27 +249,28 @@ namespace SchoolApp.Infrastructure.Migrations
                 {
                     b.Property<int>("id")
                         .ValueGeneratedOnAdd()
-                        .HasColumnType("int");
-
-                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("id"), 1L, 1);
+                        .HasColumnType("INTEGER");
 
                     b.Property<DateTime?>("createdate")
-                        .HasColumnType("datetime2");
+                        .HasColumnType("TEXT");
 
                     b.Property<string>("createdby")
-                        .HasColumnType("nvarchar(max)");
+                        .HasColumnType("TEXT");
 
                     b.Property<int>("personid")
-                        .HasColumnType("int");
+                        .HasColumnType("INTEGER");
+
+                    b.Property<string>("photoprofessor")
+                        .HasColumnType("TEXT");
 
                     b.Property<string>("profcode")
-                        .HasColumnType("nvarchar(max)");
+                        .HasColumnType("TEXT");
 
                     b.Property<DateTime?>("updatedate")
-                        .HasColumnType("datetime2");
+                        .HasColumnType("TEXT");
 
                     b.Property<string>("updatedby")
-                        .HasColumnType("nvarchar(max)");
+                        .HasColumnType("TEXT");
 
                     b.HasKey("id");
 
@@ -292,31 +282,34 @@ namespace SchoolApp.Infrastructure.Migrations
                         new
                         {
                             id = 1,
-                            createdate = new DateTime(2022, 1, 29, 23, 56, 32, 88, DateTimeKind.Local).AddTicks(5086),
+                            createdate = new DateTime(2022, 1, 30, 12, 0, 16, 48, DateTimeKind.Local).AddTicks(7784),
                             createdby = "Seed Data",
                             personid = 4,
+                            photoprofessor = "avatar.png",
                             profcode = "CODE_1",
-                            updatedate = new DateTime(2022, 1, 29, 23, 56, 32, 88, DateTimeKind.Local).AddTicks(5096),
+                            updatedate = new DateTime(2022, 1, 30, 12, 0, 16, 48, DateTimeKind.Local).AddTicks(7796),
                             updatedby = "Seed Data"
                         },
                         new
                         {
                             id = 2,
-                            createdate = new DateTime(2022, 1, 29, 23, 56, 32, 88, DateTimeKind.Local).AddTicks(5101),
+                            createdate = new DateTime(2022, 1, 30, 12, 0, 16, 48, DateTimeKind.Local).AddTicks(7799),
                             createdby = "Seed Data",
                             personid = 5,
+                            photoprofessor = "avatar.png",
                             profcode = "CODE_2",
-                            updatedate = new DateTime(2022, 1, 29, 23, 56, 32, 88, DateTimeKind.Local).AddTicks(5103),
+                            updatedate = new DateTime(2022, 1, 30, 12, 0, 16, 48, DateTimeKind.Local).AddTicks(7801),
                             updatedby = "Seed Data"
                         },
                         new
                         {
                             id = 3,
-                            createdate = new DateTime(2022, 1, 29, 23, 56, 32, 88, DateTimeKind.Local).AddTicks(5106),
+                            createdate = new DateTime(2022, 1, 30, 12, 0, 16, 48, DateTimeKind.Local).AddTicks(7804),
                             createdby = "Seed Data",
                             personid = 6,
+                            photoprofessor = "avatar.png",
                             profcode = "CODE_3",
-                            updatedate = new DateTime(2022, 1, 29, 23, 56, 32, 88, DateTimeKind.Local).AddTicks(5108),
+                            updatedate = new DateTime(2022, 1, 30, 12, 0, 16, 48, DateTimeKind.Local).AddTicks(7806),
                             updatedby = "Seed Data"
                         });
                 });
@@ -325,30 +318,28 @@ namespace SchoolApp.Infrastructure.Migrations
                 {
                     b.Property<int>("id")
                         .ValueGeneratedOnAdd()
-                        .HasColumnType("int");
-
-                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("id"), 1L, 1);
+                        .HasColumnType("INTEGER");
 
                     b.Property<DateTime?>("createdate")
-                        .HasColumnType("datetime2");
+                        .HasColumnType("TEXT");
 
                     b.Property<string>("createdby")
-                        .HasColumnType("nvarchar(max)");
+                        .HasColumnType("TEXT");
 
                     b.Property<string>("description")
-                        .HasColumnType("nvarchar(max)");
+                        .HasColumnType("TEXT");
 
                     b.Property<int>("role")
-                        .HasColumnType("int");
+                        .HasColumnType("INTEGER");
 
                     b.Property<string>("title")
-                        .HasColumnType("nvarchar(max)");
+                        .HasColumnType("TEXT");
 
                     b.Property<DateTime?>("updatedate")
-                        .HasColumnType("datetime2");
+                        .HasColumnType("TEXT");
 
                     b.Property<string>("updatedby")
-                        .HasColumnType("nvarchar(max)");
+                        .HasColumnType("TEXT");
 
                     b.HasKey("id");
 
@@ -358,34 +349,34 @@ namespace SchoolApp.Infrastructure.Migrations
                         new
                         {
                             id = 1,
-                            createdate = new DateTime(2022, 1, 29, 23, 56, 32, 88, DateTimeKind.Local).AddTicks(5408),
+                            createdate = new DateTime(2022, 1, 30, 12, 0, 16, 48, DateTimeKind.Local).AddTicks(8071),
                             createdby = "Seed Data",
                             description = "Super Administrator Description",
                             role = 1,
                             title = "Super Administrator",
-                            updatedate = new DateTime(2022, 1, 29, 23, 56, 32, 88, DateTimeKind.Local).AddTicks(5413),
+                            updatedate = new DateTime(2022, 1, 30, 12, 0, 16, 48, DateTimeKind.Local).AddTicks(8076),
                             updatedby = "Seed Data"
                         },
                         new
                         {
                             id = 2,
-                            createdate = new DateTime(2022, 1, 29, 23, 56, 32, 88, DateTimeKind.Local).AddTicks(5417),
+                            createdate = new DateTime(2022, 1, 30, 12, 0, 16, 48, DateTimeKind.Local).AddTicks(8079),
                             createdby = "Seed Data",
                             description = "Administrator Description",
                             role = 2,
                             title = "Administrator",
-                            updatedate = new DateTime(2022, 1, 29, 23, 56, 32, 88, DateTimeKind.Local).AddTicks(5419),
+                            updatedate = new DateTime(2022, 1, 30, 12, 0, 16, 48, DateTimeKind.Local).AddTicks(8081),
                             updatedby = "Seed Data"
                         },
                         new
                         {
                             id = 3,
-                            createdate = new DateTime(2022, 1, 29, 23, 56, 32, 88, DateTimeKind.Local).AddTicks(5422),
+                            createdate = new DateTime(2022, 1, 30, 12, 0, 16, 48, DateTimeKind.Local).AddTicks(8083),
                             createdby = "Seed Data",
                             description = "User Description",
                             role = 3,
                             title = "User",
-                            updatedate = new DateTime(2022, 1, 29, 23, 56, 32, 88, DateTimeKind.Local).AddTicks(5423),
+                            updatedate = new DateTime(2022, 1, 30, 12, 0, 16, 48, DateTimeKind.Local).AddTicks(8085),
                             updatedby = "Seed Data"
                         });
                 });
@@ -394,27 +385,28 @@ namespace SchoolApp.Infrastructure.Migrations
                 {
                     b.Property<int>("id")
                         .ValueGeneratedOnAdd()
-                        .HasColumnType("int");
-
-                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("id"), 1L, 1);
+                        .HasColumnType("INTEGER");
 
                     b.Property<DateTime?>("createdate")
-                        .HasColumnType("datetime2");
+                        .HasColumnType("TEXT");
 
                     b.Property<string>("createdby")
-                        .HasColumnType("nvarchar(max)");
+                        .HasColumnType("TEXT");
 
                     b.Property<int>("levelid")
-                        .HasColumnType("int");
+                        .HasColumnType("INTEGER");
 
                     b.Property<int>("personid")
-                        .HasColumnType("int");
+                        .HasColumnType("INTEGER");
+
+                    b.Property<string>("photostudent")
+                        .HasColumnType("TEXT");
 
                     b.Property<DateTime?>("updatedate")
-                        .HasColumnType("datetime2");
+                        .HasColumnType("TEXT");
 
                     b.Property<string>("updatedby")
-                        .HasColumnType("nvarchar(max)");
+                        .HasColumnType("TEXT");
 
                     b.HasKey("id");
 
@@ -428,31 +420,34 @@ namespace SchoolApp.Infrastructure.Migrations
                         new
                         {
                             id = 1,
-                            createdate = new DateTime(2022, 1, 29, 23, 56, 32, 88, DateTimeKind.Local).AddTicks(7516),
+                            createdate = new DateTime(2022, 1, 30, 12, 0, 16, 49, DateTimeKind.Local).AddTicks(25),
                             createdby = "Seed Data",
                             levelid = 1,
                             personid = 1,
-                            updatedate = new DateTime(2022, 1, 29, 23, 56, 32, 88, DateTimeKind.Local).AddTicks(7527),
+                            photostudent = "avatar.png",
+                            updatedate = new DateTime(2022, 1, 30, 12, 0, 16, 49, DateTimeKind.Local).AddTicks(36),
                             updatedby = "Seed Data"
                         },
                         new
                         {
                             id = 2,
-                            createdate = new DateTime(2022, 1, 29, 23, 56, 32, 88, DateTimeKind.Local).AddTicks(7532),
+                            createdate = new DateTime(2022, 1, 30, 12, 0, 16, 49, DateTimeKind.Local).AddTicks(40),
                             createdby = "Seed Data",
                             levelid = 2,
                             personid = 2,
-                            updatedate = new DateTime(2022, 1, 29, 23, 56, 32, 88, DateTimeKind.Local).AddTicks(7534),
+                            photostudent = "avatar.png",
+                            updatedate = new DateTime(2022, 1, 30, 12, 0, 16, 49, DateTimeKind.Local).AddTicks(41),
                             updatedby = "Seed Data"
                         },
                         new
                         {
                             id = 3,
-                            createdate = new DateTime(2022, 1, 29, 23, 56, 32, 88, DateTimeKind.Local).AddTicks(7537),
+                            createdate = new DateTime(2022, 1, 30, 12, 0, 16, 49, DateTimeKind.Local).AddTicks(44),
                             createdby = "Seed Data",
                             levelid = 3,
                             personid = 3,
-                            updatedate = new DateTime(2022, 1, 29, 23, 56, 32, 88, DateTimeKind.Local).AddTicks(7538),
+                            photostudent = "avatar.png",
+                            updatedate = new DateTime(2022, 1, 30, 12, 0, 16, 49, DateTimeKind.Local).AddTicks(46),
                             updatedby = "Seed Data"
                         });
                 });
@@ -461,33 +456,31 @@ namespace SchoolApp.Infrastructure.Migrations
                 {
                     b.Property<int>("id")
                         .ValueGeneratedOnAdd()
-                        .HasColumnType("int");
-
-                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("id"), 1L, 1);
+                        .HasColumnType("INTEGER");
 
                     b.Property<DateTime?>("createdate")
-                        .HasColumnType("datetime2");
+                        .HasColumnType("TEXT");
 
                     b.Property<string>("createdby")
-                        .HasColumnType("nvarchar(max)");
+                        .HasColumnType("TEXT");
 
                     b.Property<string>("email")
-                        .HasColumnType("nvarchar(max)");
+                        .HasColumnType("TEXT");
 
                     b.Property<string>("password")
-                        .HasColumnType("nvarchar(max)");
+                        .HasColumnType("TEXT");
 
                     b.Property<int>("personid")
-                        .HasColumnType("int");
+                        .HasColumnType("INTEGER");
 
                     b.Property<int>("roleid")
-                        .HasColumnType("int");
+                        .HasColumnType("INTEGER");
 
                     b.Property<DateTime?>("updatedate")
-                        .HasColumnType("datetime2");
+                        .HasColumnType("TEXT");
 
                     b.Property<string>("updatedby")
-                        .HasColumnType("nvarchar(max)");
+                        .HasColumnType("TEXT");
 
                     b.HasKey("id");
 
@@ -501,37 +494,37 @@ namespace SchoolApp.Infrastructure.Migrations
                         new
                         {
                             id = 1,
-                            createdate = new DateTime(2022, 1, 29, 23, 56, 32, 89, DateTimeKind.Local).AddTicks(1939),
+                            createdate = new DateTime(2022, 1, 30, 12, 0, 16, 49, DateTimeKind.Local).AddTicks(3947),
                             createdby = "Seed Data",
                             email = "user1@mail.com",
                             password = "ba3253876aed6bc22d4a6ff53d8406c6ad864195ed144ab5c87621b6c233b548baeae6956df346ec8c17f5ea10f35ee3cbc514797ed7ddd3145464e2a0bab413",
                             personid = 1,
                             roleid = 1,
-                            updatedate = new DateTime(2022, 1, 29, 23, 56, 32, 89, DateTimeKind.Local).AddTicks(1950),
+                            updatedate = new DateTime(2022, 1, 30, 12, 0, 16, 49, DateTimeKind.Local).AddTicks(3956),
                             updatedby = "Seed Data"
                         },
                         new
                         {
                             id = 2,
-                            createdate = new DateTime(2022, 1, 29, 23, 56, 32, 89, DateTimeKind.Local).AddTicks(1993),
+                            createdate = new DateTime(2022, 1, 30, 12, 0, 16, 49, DateTimeKind.Local).AddTicks(3994),
                             createdby = "Seed Data",
                             email = "user2@mail.com",
                             password = "ba3253876aed6bc22d4a6ff53d8406c6ad864195ed144ab5c87621b6c233b548baeae6956df346ec8c17f5ea10f35ee3cbc514797ed7ddd3145464e2a0bab413",
                             personid = 2,
                             roleid = 2,
-                            updatedate = new DateTime(2022, 1, 29, 23, 56, 32, 89, DateTimeKind.Local).AddTicks(1996),
+                            updatedate = new DateTime(2022, 1, 30, 12, 0, 16, 49, DateTimeKind.Local).AddTicks(3997),
                             updatedby = "Seed Data"
                         },
                         new
                         {
                             id = 3,
-                            createdate = new DateTime(2022, 1, 29, 23, 56, 32, 89, DateTimeKind.Local).AddTicks(2060),
+                            createdate = new DateTime(2022, 1, 30, 12, 0, 16, 49, DateTimeKind.Local).AddTicks(4029),
                             createdby = "Seed Data",
                             email = "user3@mail.com",
                             password = "ba3253876aed6bc22d4a6ff53d8406c6ad864195ed144ab5c87621b6c233b548baeae6956df346ec8c17f5ea10f35ee3cbc514797ed7ddd3145464e2a0bab413",
                             personid = 3,
                             roleid = 3,
-                            updatedate = new DateTime(2022, 1, 29, 23, 56, 32, 89, DateTimeKind.Local).AddTicks(2062),
+                            updatedate = new DateTime(2022, 1, 30, 12, 0, 16, 49, DateTimeKind.Local).AddTicks(4032),
                             updatedby = "Seed Data"
                         });
                 });
