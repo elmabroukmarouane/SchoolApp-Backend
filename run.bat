@@ -8,9 +8,9 @@ dotnet clean
 echo -----------------------------------------
 echo *** Build Project ***
 echo -----------------------------------------
-dotnet build
+dotnet build -nowarn:CS8604,CS8602,CS8603,CS8618,CS8625,CS8767,CS8613
 
 echo -----------------------------------------
 echo *** Run Project %1 ***
 echo -----------------------------------------
-dotnet run --project %1
+dotnet run -nowarn:CS8604,CS8602,CS8603,CS8618,CS8625,CS8767,CS8613 --project %1

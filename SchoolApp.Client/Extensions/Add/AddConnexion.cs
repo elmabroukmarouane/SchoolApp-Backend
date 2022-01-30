@@ -46,12 +46,14 @@ public static class AddConnexion
         {
             if (env.IsDevelopment())
             {
-                options.UseSqlServer(
+                options
+                    .UseSqlServer(
                             connectionString,
                             options => options.EnableRetryOnFailure()
-                        ).EnableSensitiveDataLogging();
+                        ).EnableSensitiveDataLogging().EnableDetailedErrors();
             }
-            options.UseSqlServer(
+            options
+                .UseSqlServer(
                         connectionString,
                         options => options.EnableRetryOnFailure()
                     );
