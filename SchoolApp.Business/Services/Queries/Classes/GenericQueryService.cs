@@ -50,10 +50,15 @@ public class GenericQueryService<TEntity> : IGenericQueryService<TEntity> where 
             disableTracking: disableTracking);
     }
 
+    // public Task<IList<TEntity>> GetFromSqlRaw(
+    //     string sql, params object[] parameters)
+    // {
+    //     return _unitOfWork.GetRepository<TEntity>().FromSqlRaw(sql: sql, parameters: parameters);
+    // }
     public Task<IList<TEntity>> GetFromSqlRaw(
-        string sql, params object[] parameters)
+        string sql)
     {
-        return _unitOfWork.GetRepository<TEntity>().FromSqlRaw(sql: sql, parameters: parameters);
+        return _unitOfWork.GetRepository<TEntity>().FromSqlRaw(sql: sql);
     }
     #endregion
 

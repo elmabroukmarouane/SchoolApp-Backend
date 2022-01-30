@@ -96,12 +96,18 @@ public class GenericRepository<TEntity> : IGenericRepository<TEntity> where TEnt
         return await query.ToListAsync();
     }
 
+    // public virtual async Task<IList<TEntity>> FromSqlRaw(
+    //     string sql,
+    //     params object[] parameters
+    // )
+    // {
+    //     return await _dbSet.FromSqlRaw(sql, parameters).ToListAsync();
+    // }
     public virtual async Task<IList<TEntity>> FromSqlRaw(
-        string sql,
-        params object[] parameters
+        string sql
     )
     {
-        return await _dbSet.FromSqlRaw(sql, parameters).ToListAsync();
+        return await _dbSet.FromSqlRaw(sql).ToListAsync();
     }
     #endregion
 
