@@ -7,4 +7,4 @@ dotnet clean
 echo -----------------------------------------
 echo *** Build Project ***
 echo -----------------------------------------
-dotnet build
+dotnet build -nowarn:CS8604,CS8602,CS8603,CS8618,CS8625,CS8767,CS8613
