@@ -32,6 +32,28 @@ public class RoleSeed
             new Role()
             {
                 id = 3,
+                role = Roles.PROFESSOR,
+                title = "Professor",
+                description = "Professor Description",
+                createdate = DateTime.Now,
+                createdby = "Seed Data",
+                updatedate = DateTime.Now,
+                updatedby = "Seed Data"
+            },
+            new Role()
+            {
+                id = 4,
+                role = Roles.STUDENT,
+                title = "User",
+                description = "Student Description",
+                createdate = DateTime.Now,
+                createdby = "Seed Data",
+                updatedate = DateTime.Now,
+                updatedby = "Seed Data"
+            },
+            new Role()
+            {
+                id = 5,
                 role = Roles.USER,
                 title = "User",
                 description = "User Description",

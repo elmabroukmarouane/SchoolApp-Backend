@@ -1,4 +1,4 @@
-@REM %1 he target project
+@REM %1 the target project
 @echo off
 echo -----------------------------------------
 echo *** Clean Project ***

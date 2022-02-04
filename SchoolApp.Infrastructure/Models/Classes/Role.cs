@@ -5,6 +5,8 @@ public enum Roles
 {
     SUPER_ADMIN = 1,
     ADMIN,
+    PROFESSOR,
+    STUDENT,
     USER
 }
 public class Role : Entity
