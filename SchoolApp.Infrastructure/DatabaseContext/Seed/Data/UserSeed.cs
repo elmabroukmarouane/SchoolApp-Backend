@@ -44,6 +44,30 @@ public class UserSeed
                 createdby = "Seed Data",
                 updatedate = DateTime.Now,
                 updatedby = "Seed Data"
+            },
+            new User()
+            {
+                id = 4,
+                roleid = 4,
+                personid = 4,
+                email = "user4@mail.com",
+                password = CreateHashPassword("123456"),
+                createdate = DateTime.Now,
+                createdby = "Seed Data",
+                updatedate = DateTime.Now,
+                updatedby = "Seed Data"
+            },
+            new User()
+            {
+                id = 5,
+                roleid = 5,
+                personid = 5,
+                email = "user5@mail.com",
+                password = CreateHashPassword("123456"),
+                createdate = DateTime.Now,
+                createdby = "Seed Data",
+                updatedate = DateTime.Now,
+                updatedby = "Seed Data"
             }
         };
     }
