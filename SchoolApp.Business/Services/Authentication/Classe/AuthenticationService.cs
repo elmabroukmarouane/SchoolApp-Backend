@@ -7,18 +7,21 @@ using System.Text;
 using SchoolApp.Infrastructure.Models.Classes;
 using SchoolApp.Infrastructure.Models.MapObjects;
 using SchoolApp.Infrastructure.DatabaseContext.Seed.Data;
+using SchoolApp.Business.Services.Commands.Interfaces;
 
 namespace SchoolApp.Business.Services.Authentication.Classe;
 public class AuthenticationService : IAuthenticationService
 {
     #region ATTRIBUTE
     private readonly IGenericQueryService<User> _genericQueryService;
+    private readonly IGenericCommandService<User> _genericCommandService;
     #endregion
 
     #region CONTRUCTOR
-    public AuthenticationService(IGenericQueryService<User> genericQueryService)
+    public AuthenticationService(IGenericQueryService<User> genericQueryService, IGenericCommandService<User> genericCommandService)
     {
         _genericQueryService = genericQueryService;
+        _genericCommandService = genericCommandService;
     }
     #endregion
 
@@ -38,9 +41,22 @@ public class AuthenticationService : IAuthenticationService
         var passwordAuth = AttempingUser.password;
         if (passwordAuth.Equals(passwordHash))
         {
+            AttempingUser.isOnline = true;
+            _genericCommandService.UpdateTEntity(AttempingUser);
             return AttempingUser;
         }
         return null;
+    }
+    public async Task<bool> Logout(int id)
+    {
+        var LoggedUser = await _genericQueryService.GetTEntityById(id);
+        if (LoggedUser == null)
+        {
+            return false;
+        }
+        LoggedUser.isOnline = false;
+        _genericCommandService.UpdateTEntity(LoggedUser);
+        return true;
     }
 
     public string CreateToken(User user, string keyString, string issuerString, string audienceString)

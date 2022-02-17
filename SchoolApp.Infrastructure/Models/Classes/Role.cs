@@ -1,5 +1,3 @@
-using SchoolApp.Infrastructure.Models.Interfaces;
-
 namespace SchoolApp.Infrastructure.Models.Classes;
 public enum Roles
 {

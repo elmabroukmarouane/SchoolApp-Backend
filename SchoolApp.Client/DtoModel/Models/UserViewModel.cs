@@ -8,6 +8,7 @@ namespace SchoolApp.Client.DtoModel.Models;
 public class UserViewModel : Entity
 {
     public string? email { get; set; }
+    public bool isOnline { get; set; }
     public virtual RoleViewModel? role { get; set; }
     public virtual PersonViewModel? person { get; set; }
 }

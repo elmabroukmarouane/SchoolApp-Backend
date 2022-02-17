@@ -67,4 +67,33 @@ public class AuthenticationController : ControllerBase
             });
         }
     }
+
+    [Route("Logout")]
+    [HttpGet]
+    public async Task<IActionResult> Logout(int id)
+    {
+        try
+        {
+            var logout = await _authenticationService.Logout(id);
+            if (!logout)
+            {
+                return StatusCode(400, new
+                {
+                    Message = "Something happened when trying to logout !"
+                });
+            }
+            return Ok(new
+            {
+                Message = "Hope to see you soon :) !"
+            });
+        }
+        catch (Exception ex)
+        {
+            _logger.LoggingMessageError("SchoolApp", (int)HttpStatusCode.InternalServerError, HttpStatusCode.InternalServerError.ToString(), HttpContext.Request.Method, ControllerContext.RouteData.Values["controller"].ToString(), ControllerContext.RouteData.Values["controller"].ToString() + " - Add", ex, _currentEnvironment.ContentRootPath);
+            return StatusCode(500, new
+            {
+                Message = "Logout failed !"
+            });
+        }
+    }
 }

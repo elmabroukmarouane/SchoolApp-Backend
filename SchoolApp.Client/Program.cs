@@ -57,7 +57,10 @@ builder.Services.AddJWT(builder.Configuration);
 builder.Services.AddAutoMapper(AppDomain.CurrentDomain.GetAssemblies());
 builder.Services.AddCORS(builder.Configuration);
 builder.Services.AddSERVICES(builder.Configuration, builder.Environment);
-builder.Services.AddSignalR();
+builder.Services.AddSignalR(options => 
+ { 
+     options.EnableDetailedErrors = true; 
+ });
 
 var app = builder.Build();
 
@@ -68,16 +71,16 @@ if (app.Environment.IsDevelopment())
     app.UseSwaggerUI();
 }
 
+app.UseCORS(app.Configuration);
+app.MapHub<RealTimeHub>("/hubs/realtimehub");
 app.UseHttpsRedirection();
 
 app.UseAuthentication();
 app.UseAuthorization();
 
-app.UseCORS(app.Configuration);
 app.UseJWT();
 
 
 app.MapControllers();
-app.MapHub<RealTimeHub>("/realtimehub");
 
 app.Run();

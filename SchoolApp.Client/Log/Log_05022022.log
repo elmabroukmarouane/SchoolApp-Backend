@@ -1,0 +1,8 @@
+[Error] [05/02/2022 23:44:45+00:00] [500 - InternalServerError] [POST] [SchoolApp.AuthenticationController.Authentication - Add]: Exception => System.NullReferenceException: Object reference not set to an instance of an object.
+   at SchoolApp.Business.Services.Authentication.Classe.AuthenticationService.Logout(Object id) in C:\Users\Marouane Win10 VM\Documents\DotnetProject.Source\SchoolApp\SchoolApp.Business\Services\Authentication\Classe\AuthenticationService.cs:line 53
+   at SchoolApp.Client.Controllers.AuthenticationController.Logout(Int32 id) in C:\Users\Marouane Win10 VM\Documents\DotnetProject.Source\SchoolApp\SchoolApp.Client\Controllers\AuthenticationController.cs:line 77 : Object reference not set to an instance of an object.
+---------------------------------------------------------------------------------------------------------------------
+[Error] [05/02/2022 23:57:39+00:00] [500 - InternalServerError] [POST] [SchoolApp.AuthenticationController.Authentication - Add]: Exception => System.NullReferenceException: Object reference not set to an instance of an object.
+   at SchoolApp.Business.Services.Authentication.Classe.AuthenticationService.Logout(Object id) in C:\Users\Marouane Win10 VM\Documents\DotnetProject.Source\SchoolApp\SchoolApp.Business\Services\Authentication\Classe\AuthenticationService.cs:line 56
+   at SchoolApp.Client.Controllers.AuthenticationController.Logout(Int32 id) in C:\Users\Marouane Win10 VM\Documents\DotnetProject.Source\SchoolApp\SchoolApp.Client\Controllers\AuthenticationController.cs:line 77 : Object reference not set to an instance of an object.
+---------------------------------------------------------------------------------------------------------------------
